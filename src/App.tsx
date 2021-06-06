@@ -1,26 +1,126 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {AppBase} from "./App.style";
+import {Col, Container, Row} from "react-bootstrap";
+import './assets/css/bootstrap.min.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = (): JSX.Element => {
+    return <AppBase>
+        {/* header-blue */}
+        <header className="header-blue">
+            <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <Container fluid>
+                <a className="navbar-brand" href="#">Company Name</a>
+                    <button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1">
+                        <span className="visually-hidden">Toggle navigation</span>
+                        <span className="navbar-toggler-icon"></span></button>
+                    <div className="collapse navbar-collapse" id="navcol-1">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Link</a></li>
+                            <li className="nav-item dropdown">
+                                <a className="dropdown-toggle nav-link"
+                                   aria-expanded="false" data-bs-toggle="dropdown"
+                                   href="#">Dropdown </a>
+                                <div className="dropdown-menu">
+                                    <a className="dropdown-item" href="#">First Item</a>
+                                    <a className="dropdown-item" href="#">Second Item</a>
+                                    <a className="dropdown-item" href="#">Third Item</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form className="d-flex me-auto navbar-form" target="_self">
+                            <div className="d-flex align-items-center">
+                                <label className="form-label d-flex mb-0"
+                                       htmlFor="search-field">
+                                    <i className="fa fa-search"></i>
+                                </label>
+                                <input className="form-control search-field"
+                                       type="search"
+                                       id="search-field"
+                                       name="search" />
+                            </div>
+                        </form>
+                        <span className="navbar-text">
+                            <a className="login" href="#">Log In</a>
+                        </span>
+                        <a className="btn btn-light action-button" role="button" href="#">Sign Up</a>
+                    </div>
+                </Container>
+            </nav>
+
+            <Container className="hero">
+                <Row>
+                    <Col lg={6} xl={5} className="offset-xl-1">
+                        <h1>The revolution is here.</h1>
+                        <p>Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum. Nam consequat neque
+                            quis sapien viverra convallis. In non tempus lorem.
+                        </p>
+                        <button className="btn btn-light btn-lg action-button" type="button">
+                            Learn More
+                        </button>
+                    </Col>
+                    <Col lg={5} md={5} className="offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                        <div className="phone-mockup">
+                            <img className="device" src="https://amaharjan.com/projects/any-company/assets/images/phone.svg" />
+                            <div className="screen"></div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </header>
+
+        {/* article-list */}
+        <section className="article-list">
+            <Container>
+                <div className="intro">
+                    <h2 className="text-center">Latest Articles</h2>
+                    <p className="text-center">
+                        Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum
+                        nibherat, pellentesque ut laoreet vitae.
+                    </p>
+                </div>
+                <Row className="row articles">
+                    <Col md={4} sm={6} className="item">
+                        <a href="#">
+                            <img className="img-fluid"
+                                 src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/>
+                        </a>
+                        <h3 className="name">Article Title</h3>
+                        <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                            Praesent
+                            aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a
+                        className="action" href="#"><i className="fa fa-arrow-circle-right"></i></a>
+                    </Col>
+                    <Col md={4} sm={6} className="item">
+                        <a href="#">
+                            <img className="img-fluid"
+                                 src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
+                        </a>
+                        <h3 className="name">Article Title</h3>
+                        <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                            Praesent
+                            aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a
+                        className="action" href="#"><i className="fa fa-arrow-circle-right"></i></a>
+                    </Col>
+                    <Col md={4} sm={6} className="item">
+                        <a href="#">
+                            <img className="img-fluid"
+                                 src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/>
+                        </a>
+                        <h3 className="name">Article Title</h3>
+                        <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                            Praesent
+                            aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a
+                        className="action" href="#"><i className="fa fa-arrow-circle-right"></i></a>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+
+
+
+    </AppBase>
 }
 
 export default App;
