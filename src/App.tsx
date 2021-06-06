@@ -8,7 +8,7 @@ import './assets/fonts/ionicons.min.css'
 import {Home} from "./views";
 import {Footer} from "./layouts/Main/components";
 
-import {featurebox, latestproject, project} from '../src/api/db.json'
+import {featurebox, gallery, latestproject, project} from '../src/api/db.json'
 
 const App = (): JSX.Element => {
     return <AppBase>
@@ -158,35 +158,16 @@ const App = (): JSX.Element => {
                         nibh erat, pellentesque ut laoreet vitae. </p>
                 </div>
                 <div className="row photos" data-bss-baguettebox="">
-                    <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/desk.jpg">
-                        <img className="img-fluid"
-                             src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/></a>
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/building.jpg">
-                        <img className="img-fluid"
-                             src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
-                    </a>
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"><img
-                        className="img-fluid" src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/></a>
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-lg-3 item">
-                        <a href="https://amaharjan.com/projects/any-company/assets/images/building.jpg">
-                            <img className="img-fluid"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
-                        </a>
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"><img
-                        className="img-fluid" src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/></a>
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"><img
-                        className="img-fluid" src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/></a>
-                    </div>
+                    {gallery.map((item, index) => {
+                        return (
+                            <Col lg={3} md={4} sm={6} className="item" key={index}>
+                                <a href={item.image_url}>
+                                    <img className="img-fluid"
+                                         src={item.image_url}/>
+                                </a>
+                            </Col>
+                        )
+                    })}
                 </div>
             </div>
         </section>
