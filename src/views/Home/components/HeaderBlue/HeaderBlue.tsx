@@ -49,7 +49,9 @@ const HeaderBlue = () => {
         <Container className="hero">
             <Row>
                 <Col lg={6} xl={5} className="offset-xl-1">
-                    <h1>The revolution is heres.</h1>
+                    <h1>
+                        Take a tour of our projects.
+                    </h1>
                     <p>
                         Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum. Nam consequat neque
                         quis sapien viverra convallis. In non tempus lorem.
