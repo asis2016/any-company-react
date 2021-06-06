@@ -271,6 +271,30 @@ const App = (): JSX.Element => {
             </Container>
         </section>
 
+        {/* highlight-phone */}
+        <section className="highlight-phone">
+            <Container>
+                <Row>
+                    <Col md={8}>
+                        <div className="intro">
+                            <h2>Highlight</h2>
+                            <p>Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
+                                pellentesque ut laoreet vitae. Aliqua sed justo ligula.
+                            </p>
+                            <a className="btn btn-primary" role="button" href="#">Action Button</a>
+                        </div>
+                    </Col>
+                    <Col md={4} sm={4}>
+                        <div className="d-none d-md-block phone-mockup">
+                            <img className="device"
+                                 src="https://amaharjan.com/projects/any-company/assets/images/phone.svg" />
+                            <div className="screen"></div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+
 
     </AppBase>
 }
