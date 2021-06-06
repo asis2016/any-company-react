@@ -906,6 +906,33 @@ export const AppBase = styled.div`
     margin-right: 12px;
     margin-top: -5px;
   }
+  
+  
+  /* brands */
+  .brands {
+    color: #313437;
+    background-color: #fff;
+  }
+
+  .brands a {
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  @media (max-width:767px) {
+    .brands a {
+      padding: 30px 0;
+    }
+  }
+
+  .brands a img {
+    display: inline-block;
+    margin: 10px 20px;
+    vertical-align: middle;
+  }
+
+
 
 
 

@@ -382,6 +382,19 @@ const App = (): JSX.Element => {
             </div>
         </section>
 
+        {/* brands */}
+        <div className="brands">
+            <a href="#">
+                <img src="https://amaharjan.com/projects/any-company/assets/images/instacart.png"/>
+                <img src="https://amaharjan.com/projects/any-company/assets/images/kickstarter.png"/>
+                <img src="https://amaharjan.com/projects/any-company/assets/images/lyft.png"/>
+                <img src="https://amaharjan.com/projects/any-company/assets/images/shopify.png"/>
+                <img src="https://amaharjan.com/projects/any-company/assets/images/pinterest.png"/>
+                <img src="https://amaharjan.com/projects/any-company/assets/images/twitter.png"/>
+            </a>
+        </div>
+
+
 
     </AppBase>
 }
