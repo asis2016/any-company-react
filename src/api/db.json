@@ -1,0 +1,54 @@
+{
+  "latestproject": [
+    {
+      "id": "1",
+      "title": "Tokyo, Japan",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-house-a.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Chicago, USA",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-house-b.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Koblenz, Germany",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-house-c.jpg"
+    }
+  ],
+  "featurebox": [
+    {
+      "icon": "fa-map-marker",
+      "title": "Works everywhere",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu."
+    },
+    {
+      "icon": "fa-clock-o",
+      "title": "Always available",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu."
+    },
+    {
+      "icon": "fa-list-alt",
+      "title": "Always available",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu."
+    },
+    {
+      "icon": "fa-leaf",
+      "title": "Organic",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu."
+    },
+    {
+      "icon": "fa-plane",
+      "title": "Fast",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu."
+    },
+    {
+      "icon": "fa-phone",
+      "title": "Mobile-first",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu."
+    }
+  ]
+}

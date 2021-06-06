@@ -8,6 +8,8 @@ import './assets/fonts/ionicons.min.css'
 import {Home} from "./views";
 import {Footer} from "./layouts/Main/components";
 
+import {featurebox, latestproject} from '../src/api/db.json'
+
 const App = (): JSX.Element => {
     return <AppBase>
 
@@ -29,39 +31,25 @@ const App = (): JSX.Element => {
                     </p>
                 </div>
                 <Row className="row articles">
-                    <Col md={4} sm={6} className="item">
-                        <a href="#">
-                            <img className="img-fluid"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/>
-                        </a>
-                        <h3 className="name">Article Title</h3>
-                        <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                            Praesent
-                            aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a
-                        className="action" href="#"><i className="fa fa-arrow-circle-right"></i></a>
-                    </Col>
-                    <Col md={4} sm={6} className="item">
-                        <a href="#">
-                            <img className="img-fluid"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
-                        </a>
-                        <h3 className="name">Article Title</h3>
-                        <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                            Praesent
-                            aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a
-                        className="action" href="#"><i className="fa fa-arrow-circle-right"></i></a>
-                    </Col>
-                    <Col md={4} sm={6} className="item">
-                        <a href="#">
-                            <img className="img-fluid"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/>
-                        </a>
-                        <h3 className="name">Article Title</h3>
-                        <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                            Praesent
-                            aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a
-                        className="action" href="#"><i className="fa fa-arrow-circle-right"></i></a>
-                    </Col>
+                    {latestproject.map((item, index) => {
+                        return (
+                            <Col md={4} sm={6} className="item" key={index}>
+                                <a href="#">
+                                    <img className="img-fluid"
+                                         src={item.image_url}/>
+                                </a>
+                                <h3 className="name">
+                                    {item.title}
+                                </h3>
+                                <p className="description">
+                                    {item.description}
+                                </p>
+                                <a className="action" href="#">
+                                    <i className="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </Col>
+                        )
+                    })}
                 </Row>
             </Container>
         </section>
@@ -76,65 +64,26 @@ const App = (): JSX.Element => {
                         nibh erat, pellentesque ut laoreet vitae.
                     </p>
                 </div>
-                <Col className="row justify-content-center features">
-                    <Col lg={4} md={5} sm={6} className="item">
-                        <div className="box">
-                            <i className="fa fa-map-marker icon"></i>
-                            <h3 className="name">Works everywhere</h3>
-                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                Praesent aliquam in tellus eu.
-                            </p>
-                            <a className="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </Col>
-                    <Col lg={4} md={5} sm={6} className="item">
-                        <div className="box">
-                            <i className="fa fa-clock-o icon"></i>
-                            <h3 className="name">Always available</h3>
-                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                Praesent aliquam in tellus eu.</p>
-                            <a className="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </Col>
-                    <Col lg={4} md={5} sm={6} className="item">
-                        <div className="box">
-                            <i className="fa fa-list-alt icon"></i>
-                            <h3 className="name">Customizable </h3>
-                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                Praesent aliquam in tellus eu.</p>
-                            <a className="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </Col>
-                    <Col lg={4} md={5} sm={6} className="item">
-                        <div className="box">
-                            <i className="fa fa-leaf icon"></i>
-                            <h3 className="name">Organic </h3>
-                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                Praesent aliquam in tellus eu.</p>
-                            <a className="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </Col>
-                    <Col lg={4} md={5} sm={6} className="item">
-                        <div className="box">
-                            <i className="fa fa-plane icon"></i>
-                            <h3 className="name">Fast </h3>
-                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                Praesent aliquam in tellus eu.</p>
-                            <a className="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </Col>
-                    <Col lg={4} md={5} sm={6} className="item">
-                        <div className="box">
-                            <i className="fa fa-phone icon"></i>
-                            <h3 className="name">Mobile-first</h3>
-                            <p className="description">
-                                Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                Praesent aliquam in tellus eu.
-                            </p>
-                            <a className="learn-more" href="#">Learn more »</a>
-                        </div>
-                    </Col>
-                </Col>
+                <Row className="row justify-content-center features">
+                    {featurebox.map((item, index) => {
+                        return (
+                            <Col lg={4} md={5} sm={6} className="item" key={index}>
+                                <div className="box">
+                                    <i className={`fa ${item.icon} icon`}></i>
+                                    <h3 className="name">
+                                        {item.title}
+                                    </h3>
+                                    <p className="description">
+                                        {item.description}
+                                    </p>
+                                    <a className="learn-more" href="#">
+                                        Learn more »
+                                    </a>
+                                </div>
+                            </Col>
+                        )
+                    })}
+                </Row>
             </Container>
         </section>
 
@@ -357,9 +306,9 @@ const App = (): JSX.Element => {
                     </small>
                 </div>
                 <div className="mb-3">
-                    <textarea className="form-control"
-                              name="message"
-                              placeholder="Message"></textarea>
+                        <textarea className="form-control"
+                                  name="message"
+                                  placeholder="Message"></textarea>
                 </div>
                 <div className="mb-3">
                     <button className="btn btn-primary" type="submit">send</button>
