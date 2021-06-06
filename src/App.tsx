@@ -3,6 +3,8 @@ import './App.css';
 import {AppBase} from "./App.style";
 import {Col, Container, Row} from "react-bootstrap";
 import './assets/css/bootstrap.min.css'
+import './assets/fonts/font-awesome.min.css'
+import './assets/fonts/ionicons.min.css'
 
 const App = (): JSX.Element => {
     return <AppBase>
@@ -115,6 +117,78 @@ const App = (): JSX.Element => {
                         className="action" href="#"><i className="fa fa-arrow-circle-right"></i></a>
                     </Col>
                 </Row>
+            </Container>
+        </section>
+        
+        {/* featured box */}
+        <section className="features-boxed">
+            <Container className="container">
+                <div className="intro">
+                    <h2 className="text-center">Features </h2>
+                    <p className="text-center">
+                        Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum
+                        nibh erat, pellentesque ut laoreet vitae.
+                    </p>
+                </div>
+                <Col className="row justify-content-center features">
+                    <Col lg={4} md={5} sm={6} className="item">
+                        <div className="box">
+                            <i className="fa fa-map-marker icon"></i>
+                            <h3 className="name">Works everywhere</h3>
+                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent aliquam in tellus eu.
+                            </p>
+                            <a className="learn-more" href="#">Learn more »</a>
+                        </div>
+                    </Col>
+                    <Col lg={4} md={5} sm={6} className="item">
+                        <div className="box">
+                            <i className="fa fa-clock-o icon"></i>
+                            <h3 className="name">Always available</h3>
+                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent aliquam in tellus eu.</p>
+                            <a className="learn-more" href="#">Learn more »</a>
+                        </div>
+                    </Col>
+                    <Col lg={4} md={5} sm={6} className="item">
+                        <div className="box">
+                            <i className="fa fa-list-alt icon"></i>
+                            <h3 className="name">Customizable </h3>
+                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent aliquam in tellus eu.</p>
+                            <a className="learn-more" href="#">Learn more »</a>
+                        </div>
+                    </Col>
+                    <Col lg={4} md={5} sm={6} className="item">
+                        <div className="box">
+                            <i className="fa fa-leaf icon"></i>
+                            <h3 className="name">Organic </h3>
+                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent aliquam in tellus eu.</p>
+                            <a className="learn-more" href="#">Learn more »</a>
+                        </div>
+                    </Col>
+                    <Col lg={4} md={5} sm={6} className="item">
+                        <div className="box">
+                            <i className="fa fa-plane icon"></i>
+                            <h3 className="name">Fast </h3>
+                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent aliquam in tellus eu.</p>
+                            <a className="learn-more" href="#">Learn more »</a>
+                        </div>
+                    </Col>
+                    <Col lg={4} md={5} sm={6} className="item">
+                        <div className="box">
+                            <i className="fa fa-phone icon"></i>
+                            <h3 className="name">Mobile-first</h3>
+                            <p className="description">
+                                Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+                                Praesent aliquam in tellus eu.
+                            </p>
+                            <a className="learn-more" href="#">Learn more »</a>
+                        </div>
+                    </Col>
+                </Col>
             </Container>
         </section>
 
