@@ -204,7 +204,7 @@ export const HeaderBlueBase = styled.div`
       border-radius: 20px;
       background-color: #aaa;
       overflow: hidden;
-      background: url(https://amaharjan.com/projects/any-company/assets/images/screen-content-phone.jpg);
+      background: url(https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/screen-content-phone.jpg);
       background-size: cover;
       background-position: center;
       z-index: -1;

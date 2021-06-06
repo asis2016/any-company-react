@@ -20,7 +20,9 @@ const App = (): JSX.Element => {
         <section className="article-list">
             <Container>
                 <div className="intro">
-                    <h2 className="text-center">Latest Articles</h2>
+                    <h2 className="text-center">
+                        Latest Projects (Modern Houses)
+                    </h2>
                     <p className="text-center">
                         Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum
                         nibherat, pellentesque ut laoreet vitae.

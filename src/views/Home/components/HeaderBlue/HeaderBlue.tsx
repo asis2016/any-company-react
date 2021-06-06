@@ -64,7 +64,9 @@ const HeaderBlue = () => {
                     <div className="phone-mockup">
                         <img className="device"
                              src="https://amaharjan.com/projects/any-company/assets/images/phone.svg"/>
-                        <div className="screen"></div>
+                        <div className="screen">
+
+                        </div>
                     </div>
                 </Col>
             </Row>
