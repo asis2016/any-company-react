@@ -1,4 +1,11 @@
 {
+  "landingpage": [
+    {
+      "id": "section-project",
+      "visible": "true",
+      "title": "Our Best Services"
+    }
+  ],
   "latestproject": [
     {
       "id": "1",
@@ -150,6 +157,5 @@
     {
       "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-twitter.png"
     }
-
   ]
 }

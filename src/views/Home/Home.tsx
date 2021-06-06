@@ -4,9 +4,7 @@ import {HeaderBlue} from "./components";
 
 const Home = (): JSX.Element => {
     return <HomeBase>
-
         <HeaderBlue/>
-
     </HomeBase>
 }
 

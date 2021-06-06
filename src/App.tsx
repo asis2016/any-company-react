@@ -7,13 +7,13 @@ import './assets/fonts/font-awesome.min.css'
 import './assets/fonts/ionicons.min.css'
 import {Home} from "./views";
 import {Footer} from "./layouts/Main/components";
+import {Highlight} from './components/organisms'
+import {Feature} from './views/Home/components'
 
 import {brands, featurebox, gallery, latestproject, project, testimonial} from '../src/api/db.json'
 
 const App = (): JSX.Element => {
     return <AppBase>
-
-
         <Home/>
 
         <Footer/>
@@ -54,38 +54,9 @@ const App = (): JSX.Element => {
             </Container>
         </section>
 
-        {/* featured box */}
-        <section className="features-boxed">
-            <Container className="container">
-                <div className="intro">
-                    <h2 className="text-center">Features </h2>
-                    <p className="text-center">
-                        Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum
-                        nibh erat, pellentesque ut laoreet vitae.
-                    </p>
-                </div>
-                <Row className="row justify-content-center features">
-                    {featurebox.map((item, index) => {
-                        return (
-                            <Col lg={4} md={5} sm={6} className="item" key={index}>
-                                <div className="box">
-                                    <i className={`fa ${item.icon} icon`}></i>
-                                    <h3 className="name">
-                                        {item.title}
-                                    </h3>
-                                    <p className="description">
-                                        {item.description}
-                                    </p>
-                                    <a className="learn-more" href="#">
-                                        Learn more »
-                                    </a>
-                                </div>
-                            </Col>
-                        )
-                    })}
-                </Row>
-            </Container>
-        </section>
+        {/* todo: featured box should be inside home. */}
+        <Feature />
+
 
         {/* projects-horizontal  */}
         <section className="projects-horizontal">
@@ -126,28 +97,7 @@ const App = (): JSX.Element => {
         </section>
 
         {/* highlight-phone */}
-        <section className="highlight-phone">
-            <Container>
-                <Row>
-                    <Col md={8}>
-                        <div className="intro">
-                            <h2>Highlight</h2>
-                            <p>Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
-                                pellentesque ut laoreet vitae. Aliqua sed justo ligula.
-                            </p>
-                            <a className="btn btn-primary" role="button" href="#">Action Button</a>
-                        </div>
-                    </Col>
-                    <Col md={4} sm={4}>
-                        <div className="d-none d-md-block phone-mockup">
-                            <img className="device"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/phone.svg"/>
-                            <div className="screen"></div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
+        <Highlight/>
 
         {/* photo-gallery */}
         <section className="photo-gallery">
