@@ -1,20 +1,29 @@
 import styled from "styled-components";
+import bg from "../../../../assets/images/bg-main-1.jpg";
 
 export const HeaderBlueBase = styled.div`
-  background: linear-gradient(135deg, #172a74, #21a9af);
-  background-color: #184e8e;
+  //background: linear-gradient(135deg, #172a74, #21a9af);
+  //background-color: #184e8e;
+  //background: url(${bg});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg});
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
   padding-bottom: 80px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 
-  @media (min-width: 768px) { {
-    padding-bottom: 120px;
-  }
+  @media (min-width: 768px) {
+     {
+      padding-bottom: 120px;
+    }
   }
 
   .navbar {
     background: transparent;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     color: #fff;
     border-radius: 0;
     box-shadow: none;
@@ -31,11 +40,11 @@ export const HeaderBlueBase = styled.div`
 
     .navbar-collapse {
       border-top: 1px solid rgba(255, 255, 255, 0.3);
-      margin-top: .5rem;
+      margin-top: 0.5rem;
 
       span .login {
         color: #d9d9d9;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         text-decoration: none;
 
         &:hover {
@@ -48,7 +57,8 @@ export const HeaderBlueBase = styled.div`
       border-color: rgba(255, 255, 255, 0.3);
     }
 
-    navbar-toggler:hover, .navbar-toggler:focus {
+    navbar-toggler:hover,
+    .navbar-toggler:focus {
       background: none;
     }
 
@@ -73,9 +83,7 @@ export const HeaderBlueBase = styled.div`
       .search-field:focus {
         border-bottom: 1px solid #ccc;
       }
-
     }
-
   }
 
   @media (min-width: 768px) {
@@ -94,8 +102,8 @@ export const HeaderBlueBase = styled.div`
 
   @media (min-width: 768px) {
     .navbar-nav .nav-link {
-      padding-left: .7rem;
-      padding-right: .7rem;
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
     }
   }
 
@@ -108,27 +116,30 @@ export const HeaderBlueBase = styled.div`
 
   .navbar .navbar-nav > li > .dropdown-menu {
     margin-top: -5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 2px;
   }
 
-  .navbar .dropdown-menu .dropdown-item:focus, .navbar .dropdown-menu .dropdown-item {
+  .navbar .dropdown-menu .dropdown-item:focus,
+  .navbar .dropdown-menu .dropdown-item {
     line-height: 2;
     color: #37434d;
   }
 
-  .navbar .dropdown-menu .dropdown-item:focus, .navbar .dropdown-menu .dropdown-item:hover {
+  .navbar .dropdown-menu .dropdown-item:focus,
+  .navbar .dropdown-menu .dropdown-item:hover {
     background: #ebeff1;
   }
 
-  .action-button, .action-button:not(.disabled):active {
+  .action-button,
+  .action-button:not(.disabled):active {
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 40px;
     color: #ebeff1;
     box-shadow: none;
     text-shadow: none;
-    padding: .3rem .8rem;
+    padding: 0.3rem 0.8rem;
     background: transparent;
     transition: background-color 0.25s;
     outline: none;
@@ -137,7 +148,6 @@ export const HeaderBlueBase = styled.div`
   .action-button:hover {
     color: #fff;
   }
-
 
   .hero {
     margin-top: 20px;
@@ -175,7 +185,6 @@ export const HeaderBlueBase = styled.div`
     }
   }
 
-
   .phone-holder {
     text-align: right;
   }
@@ -210,7 +219,7 @@ export const HeaderBlueBase = styled.div`
       z-index: -1;
 
       &:before {
-        content: '';
+        content: "";
         background-color: #fff;
         position: absolute;
         width: 70%;
