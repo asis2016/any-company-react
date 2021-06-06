@@ -515,8 +515,9 @@ export const AppBase = styled.div`
   .article-list .item .action:hover {
     opacity: 1;
   }
-  
+
   /* features-boxed */
+
   .features-boxed {
     color: #313437;
     background-color: #eef4f7;
@@ -533,7 +534,7 @@ export const AppBase = styled.div`
     color: inherit;
   }
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     .features-boxed h2 {
       margin-bottom: 25px;
       padding-top: 25px;
@@ -585,6 +586,73 @@ export const AppBase = styled.div`
     font-size: 15px;
     margin-top: 15px;
     margin-bottom: 20px;
+  }
+
+  /* project - horizontal */
+
+  .projects-horizontal {
+    color: #313437;
+    background-color: #fff;
+  }
+
+  .projects-horizontal p {
+    color: #7d8285;
+  }
+
+  .projects-horizontal h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+  }
+
+  @media (max-width: 767px) {
+    .projects-horizontal h2 {
+      margin-bottom: 25px;
+      padding-top: 25px;
+      font-size: 24px;
+    }
+  }
+
+  .projects-horizontal .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 10px;
+  }
+
+  .projects-horizontal .projects {
+    padding-bottom: 40px;
+  }
+
+  .projects-horizontal .item {
+    padding-top: 60px;
+    min-height: 160px;
+  }
+
+  @media (max-width: 767px) {
+    .projects-horizontal .item {
+      padding-top: 40px;
+      min-height: 160px;
+    }
+  }
+
+  .projects-horizontal .item .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: inherit;
+  }
+
+  @media (max-width: 991px) {
+    .projects-horizontal .item .name {
+      margin-top: 22px;
+    }
+  }
+
+  .projects-horizontal .item .description {
+    font-size: 15px;
+    margin-bottom: 0;
   }
 
 

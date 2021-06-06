@@ -12,7 +12,7 @@ const App = (): JSX.Element => {
         <header className="header-blue">
             <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
                 <Container fluid>
-                <a className="navbar-brand" href="#">Company Name</a>
+                    <a className="navbar-brand" href="#">Company Name</a>
                     <button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1">
                         <span className="visually-hidden">Toggle navigation</span>
                         <span className="navbar-toggler-icon"></span></button>
@@ -40,7 +40,7 @@ const App = (): JSX.Element => {
                                 <input className="form-control search-field"
                                        type="search"
                                        id="search-field"
-                                       name="search" />
+                                       name="search"/>
                             </div>
                         </form>
                         <span className="navbar-text">
@@ -64,7 +64,8 @@ const App = (): JSX.Element => {
                     </Col>
                     <Col lg={5} md={5} className="offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
                         <div className="phone-mockup">
-                            <img className="device" src="https://amaharjan.com/projects/any-company/assets/images/phone.svg" />
+                            <img className="device"
+                                 src="https://amaharjan.com/projects/any-company/assets/images/phone.svg"/>
                             <div className="screen"></div>
                         </div>
                     </Col>
@@ -119,7 +120,7 @@ const App = (): JSX.Element => {
                 </Row>
             </Container>
         </section>
-        
+
         {/* featured box */}
         <section className="features-boxed">
             <Container className="container">
@@ -192,6 +193,83 @@ const App = (): JSX.Element => {
             </Container>
         </section>
 
+        {/* projects-horizontal  */}
+        <section className="projects-horizontal">
+            <Container>
+                <div className="intro">
+                    <h2 className="text-center">Projects </h2>
+                    <p className="text-center">
+                        Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum
+                        nibh erat, pellentesque ut laoreet vitae.
+                    </p>
+                </div>
+                <div className="row projects">
+                    <div className="col-sm-6 item">
+                        <div className="row">
+                            <div className="col-md-12 col-lg-5">
+                                <a href="#">
+                                    <img className="img-fluid"
+                                         src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/>
+                                </a>
+                            </div>
+                            <div className="col">
+                                <h3 className="name">Project Name</h3>
+                                <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus
+                                    lacus. Praesent aliquam in tellus eu gravida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 item">
+                        <div className="row">
+                            <div className="col-md-12 col-lg-5">
+                                <a href="#">
+                                    <img className="img-fluid"
+                                         src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
+                                </a>
+                            </div>
+                            <div className="col">
+                                <h3 className="name">Project Name</h3>
+                                <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus
+                                    lacus. Praesent aliquam in tellus eu gravida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 item">
+                        <div className="row">
+                            <div className="col-md-12 col-lg-5">
+                                <a href="#">
+                                    <img className="img-fluid"
+                                         src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/>
+                                </a>
+                            </div>
+                            <div className="col">
+                                <h3 className="name">Project Name</h3>
+                                <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus
+                                    lacus. Praesent aliquam in tellus eu gravida.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6 item">
+                        <div className="row">
+                            <div className="col-md-12 col-lg-5"><a href="#">
+                                <img className="img-fluid"
+                                     src="https://amaharjan.com/projects/any-company/assets/images/minibus.jpeg"/>
+                            </a>
+                            </div>
+                            <div className="col">
+                                <h3 className="name">Project Name</h3>
+                                <p className="description">
+                                    Aenean tortor est, vulputate quis leo in, vehicula rhoncus
+                                    lacus. Praesent aliquam in tellus eu gravida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </section>
 
 
     </AppBase>
