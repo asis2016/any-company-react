@@ -72,5 +72,25 @@
       "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.",
       "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/project-d.jpg"
     }
+  ],
+  "gallery": [
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-a.jpg"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-b.jpg"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-c.jpg"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-d.jpg"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-e.jpg"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-f.jpg"
+    }
   ]
 }
