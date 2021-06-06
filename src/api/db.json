@@ -131,7 +131,7 @@
       "comments": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est."
     }
   ],
-  "brand": [
+  "brands": [
     {
       "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-instacart.png"
     },

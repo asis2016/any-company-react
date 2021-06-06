@@ -8,7 +8,7 @@ import './assets/fonts/ionicons.min.css'
 import {Home} from "./views";
 import {Footer} from "./layouts/Main/components";
 
-import {featurebox, gallery, latestproject, project, testimonial} from '../src/api/db.json'
+import {brands, featurebox, gallery, latestproject, project, testimonial} from '../src/api/db.json'
 
 const App = (): JSX.Element => {
     return <AppBase>
@@ -212,12 +212,11 @@ const App = (): JSX.Element => {
         {/* brands */}
         <div className="brands">
             <a href="#">
-                <img src="https://amaharjan.com/projects/any-company/assets/images/instacart.png"/>
-                <img src="https://amaharjan.com/projects/any-company/assets/images/kickstarter.png"/>
-                <img src="https://amaharjan.com/projects/any-company/assets/images/lyft.png"/>
-                <img src="https://amaharjan.com/projects/any-company/assets/images/shopify.png"/>
-                <img src="https://amaharjan.com/projects/any-company/assets/images/pinterest.png"/>
-                <img src="https://amaharjan.com/projects/any-company/assets/images/twitter.png"/>
+                {brands.map((item, index) => {
+                    return (
+                        <img src={item.image_url} key={index}/>
+                    )
+                })}
             </a>
         </div>
 
