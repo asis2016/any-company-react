@@ -107,5 +107,25 @@
     {
       "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-k.jpg"
     }
+  ],
+  "testimonial": [
+    {
+      "full_name": "Ben Johnson",
+      "job_title": "CEO of Company Inc.",
+      "image_url": "https://amaharjan.com/projects/any-company/assets/images/1.jpg",
+      "comments": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est."
+    },
+    {
+      "full_name": "Ben Johnson",
+      "job_title": "CEO of Company Inc.",
+      "image_url": "https://amaharjan.com/projects/any-company/assets/images/1.jpg",
+      "comments": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est."
+    },
+    {
+      "full_name": "Ben Johnson",
+      "job_title": "CEO of Company Inc.",
+      "image_url": "https://amaharjan.com/projects/any-company/assets/images/1.jpg",
+      "comments": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est."
+    }
   ]
 }

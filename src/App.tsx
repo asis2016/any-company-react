@@ -8,7 +8,7 @@ import './assets/fonts/ionicons.min.css'
 import {Home} from "./views";
 import {Footer} from "./layouts/Main/components";
 
-import {featurebox, gallery, latestproject, project} from '../src/api/db.json'
+import {featurebox, gallery, latestproject, project, testimonial} from '../src/api/db.json'
 
 const App = (): JSX.Element => {
     return <AppBase>
@@ -184,42 +184,27 @@ const App = (): JSX.Element => {
                     </p>
                 </div>
                 <div className="row people">
-                    <div className="col-md-6 col-lg-4 item">
-                        <div className="box">
-                            <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
-                                Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
-                        </div>
-                        <div className="author">
-                            <img className="rounded-circle"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/1.jpg"/>
-                            <h5 className="name">Ben Johnson</h5>
-                            <p className="title">CEO of Company Inc.</p>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4 item">
-                        <div className="box">
-                            <p className="description">Praesent aliquam in tellus eu gravida. Aliquam varius finibus
-                                est, et interdum justo suscipit id.</p>
-                        </div>
-                        <div className="author">
-                            <img className="rounded-circle"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/3.jpg"/>
-                            <h5 className="name">Carl Kent</h5>
-                            <p className="title">Founder of Style Co.</p>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4 item">
-                        <div className="box">
-                            <p className="description">Aliquam varius finibus est, et interdum justo suscipit. Vulputate
-                                quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p>
-                        </div>
-                        <div className="author">
-                            <img className="rounded-circle"
-                                 src="https://amaharjan.com/projects/any-company/assets/images/2.jpg"/>
-                            <h5 className="name">Emily Clark</h5>
-                            <p className="title">Owner of Creative Ltd.</p>
-                        </div>
-                    </div>
+                    {testimonial.map((item, index) => {
+                        return (
+                            <Col className="item" key={index}>
+                                <div className="box">
+                                    <p className="description">
+                                        {item.description}
+                                    </p>
+                                </div>
+                                <div className="author">
+                                    <img className="rounded-circle"
+                                         src={item.image_url}/>
+                                    <h5 className="name">
+                                        {item.full_name}
+                                    </h5>
+                                    <p className="title">
+                                        {item.job_title}
+                                    </p>
+                                </div>
+                            </Col>
+                        )
+                    })}
                 </div>
             </div>
         </section>
