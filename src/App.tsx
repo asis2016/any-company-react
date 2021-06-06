@@ -8,7 +8,7 @@ import './assets/fonts/ionicons.min.css'
 import {Home} from "./views";
 import {Footer} from "./layouts/Main/components";
 
-import {featurebox, latestproject} from '../src/api/db.json'
+import {featurebox, latestproject, project} from '../src/api/db.json'
 
 const App = (): JSX.Element => {
     return <AppBase>
@@ -98,69 +98,29 @@ const App = (): JSX.Element => {
                     </p>
                 </div>
                 <div className="row projects">
-                    <div className="col-sm-6 item">
-                        <div className="row">
-                            <div className="col-md-12 col-lg-5">
-                                <a href="#">
-                                    <img className="img-fluid"
-                                         src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/>
-                                </a>
+                    {project.map((item, index) => {
+                        return (
+                            <div className="col-sm-6 item" key={index}>
+                                <div className="row">
+                                    <div className="col-md-12 col-lg-5">
+                                        <a href="#">
+                                            <img className="img-fluid"
+                                                 src={item.image_url}/>
+                                        </a>
+                                    </div>
+                                    <div className="col">
+                                        <h3 className="name">
+                                            {item.title}
+                                        </h3>
+                                        <p className="description">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col">
-                                <h3 className="name">Project Name</h3>
-                                <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus
-                                    lacus. Praesent aliquam in tellus eu gravida.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 item">
-                        <div className="row">
-                            <div className="col-md-12 col-lg-5">
-                                <a href="#">
-                                    <img className="img-fluid"
-                                         src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
-                                </a>
-                            </div>
-                            <div className="col">
-                                <h3 className="name">Project Name</h3>
-                                <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus
-                                    lacus. Praesent aliquam in tellus eu gravida.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 item">
-                        <div className="row">
-                            <div className="col-md-12 col-lg-5">
-                                <a href="#">
-                                    <img className="img-fluid"
-                                         src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/>
-                                </a>
-                            </div>
-                            <div className="col">
-                                <h3 className="name">Project Name</h3>
-                                <p className="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus
-                                    lacus. Praesent aliquam in tellus eu gravida.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-6 item">
-                        <div className="row">
-                            <div className="col-md-12 col-lg-5"><a href="#">
-                                <img className="img-fluid"
-                                     src="https://amaharjan.com/projects/any-company/assets/images/minibus.jpeg"/>
-                            </a>
-                            </div>
-                            <div className="col">
-                                <h3 className="name">Project Name</h3>
-                                <p className="description">
-                                    Aenean tortor est, vulputate quis leo in, vehicula rhoncus
-                                    lacus. Praesent aliquam in tellus eu gravida.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+                        )
+                    })}
                 </div>
             </Container>
         </section>
@@ -199,21 +159,26 @@ const App = (): JSX.Element => {
                 </div>
                 <div className="row photos" data-bss-baguettebox="">
                     <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"><img
-                        className="img-fluid" src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/></a>
+                        href="https://amaharjan.com/projects/any-company/assets/images/desk.jpg">
+                        <img className="img-fluid"
+                             src="https://amaharjan.com/projects/any-company/assets/images/desk.jpg"/></a>
                     </div>
                     <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/building.jpg"><img
-                        className="img-fluid"
-                        src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/></a></div>
+                        href="https://amaharjan.com/projects/any-company/assets/images/building.jpg">
+                        <img className="img-fluid"
+                             src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
+                    </a>
+                    </div>
                     <div className="col-sm-6 col-md-4 col-lg-3 item"><a
                         href="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"><img
                         className="img-fluid" src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/></a>
                     </div>
-                    <div className="col-sm-6 col-md-4 col-lg-3 item"><a
-                        href="https://amaharjan.com/projects/any-company/assets/images/building.jpg"><img
-                        className="img-fluid"
-                        src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/></a></div>
+                    <div className="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="https://amaharjan.com/projects/any-company/assets/images/building.jpg">
+                            <img className="img-fluid"
+                                 src="https://amaharjan.com/projects/any-company/assets/images/building.jpg"/>
+                        </a>
+                    </div>
                     <div className="col-sm-6 col-md-4 col-lg-3 item"><a
                         href="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"><img
                         className="img-fluid" src="https://amaharjan.com/projects/any-company/assets/images/loft.jpg"/></a>

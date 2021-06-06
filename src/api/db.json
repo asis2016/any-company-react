@@ -50,5 +50,27 @@
       "title": "Mobile-first",
       "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu."
     }
+  ],
+  "project": [
+    {
+      "title": "Project A",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/project-a.jpg"
+    },
+    {
+      "title": "Project B",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/project-b.jpg"
+    },
+    {
+      "title": "Project C",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/project-c.jpg"
+    },
+    {
+      "title": "Project D",
+      "description": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/project-d.jpg"
+    }
   ]
 }
