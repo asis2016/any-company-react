@@ -153,7 +153,9 @@ const App = (): JSX.Element => {
         <section className="photo-gallery">
             <div className="container">
                 <div className="intro">
-                    <h2 className="text-center">Lightbox Gallery</h2>
+                    <h2 className="text-center">
+                        Modern Architecture
+                    </h2>
                     <p className="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum
                         nibh erat, pellentesque ut laoreet vitae. </p>
                 </div>
