@@ -189,7 +189,7 @@ const App = (): JSX.Element => {
                             <Col className="item" key={index}>
                                 <div className="box">
                                     <p className="description">
-                                        {item.description}
+                                        {item.comments}
                                     </p>
                                 </div>
                                 <div className="author">

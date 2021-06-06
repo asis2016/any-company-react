@@ -106,26 +106,50 @@
     },
     {
       "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-k.jpg"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/modern-architecture-l.jpg"
     }
   ],
   "testimonial": [
     {
       "full_name": "Ben Johnson",
       "job_title": "CEO of Company Inc.",
-      "image_url": "https://amaharjan.com/projects/any-company/assets/images/1.jpg",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/profile-1.jpg",
       "comments": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est."
     },
     {
       "full_name": "Ben Johnson",
       "job_title": "CEO of Company Inc.",
-      "image_url": "https://amaharjan.com/projects/any-company/assets/images/1.jpg",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/profile-2.jpg",
       "comments": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est."
     },
     {
       "full_name": "Ben Johnson",
       "job_title": "CEO of Company Inc.",
-      "image_url": "https://amaharjan.com/projects/any-company/assets/images/1.jpg",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/profile-3.jpg",
       "comments": "Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est."
     }
+  ],
+  "brand": [
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-instacart.png"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-kickstarter.png"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-lyft.png"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-shopify.png"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-pinterest.png"
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/brand-twitter.png"
+    }
+
   ]
 }
