@@ -1,6 +1,6 @@
 import React from 'react'
 import {FeatureBase} from './Feature.style'
-import {Col, Container, Row} from "react-bootstrap";
+import {Container, Row} from "react-bootstrap";
 import {featurebox} from '../../../../api/db.json'
 import {FeatureBox, SectionIntro} from '../../../../components/molecules'
 
@@ -12,13 +12,10 @@ const Feature = (): JSX.Element => {
 
             <Row className="row justify-content-center">
                 {featurebox.map((item, index) => {
-                    return (
-                        <Col lg={4} md={5} sm={6} key={index}>
-                            <FeatureBox icon={item.icon}
-                                        title={item.title}
-                                        description={item.description}/>
-                        </Col>
-                    )
+                    return <FeatureBox key={index}
+                                       icon={item.icon}
+                                       title={item.title}
+                                       description={item.description}/>
                 })}
             </Row>
         </Container>

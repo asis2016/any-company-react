@@ -1,6 +1,7 @@
+import { Col } from 'react-bootstrap';
 import styled from 'styled-components'
 
-export const FeatureBoxBase = styled.div`
+export const FeatureBoxBase = styled(Col)`
   text-align: center;
 
   .box {

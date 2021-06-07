@@ -2,7 +2,7 @@ import React from 'react'
 import {FeatureBoxBase} from './FeatureBox.style'
 
 const FeatureBox = ({icon, title, description}: FeatureBoxProps): JSX.Element => {
-    return <FeatureBoxBase>
+    return <FeatureBoxBase lg={4} md={5} sm={6}>
         <div className="box">
             <i className={`fa ${icon} icon`}></i>
             <h3 className="name">
