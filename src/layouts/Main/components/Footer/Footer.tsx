@@ -1,5 +1,6 @@
 import React from 'react'
 import {Container} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import {FooterBase} from './Footer.style'
 
 const Footer = (): JSX.Element => {
@@ -10,17 +11,17 @@ const Footer = (): JSX.Element => {
                 <div className="col-sm-6 col-md-3 item">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
+                        <li><Link to="#">Web design</Link></li>
+                        <li><Link to="#">Development</Link></li>
+                        <li><Link to="#">Hosting</Link></li>
                     </ul>
                 </div>
                 <div className="col-sm-6 col-md-3 item">
                     <h3>About</h3>
                     <ul>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><Link to="#">Company</Link></li>
+                        <li><Link to="#">Team</Link></li>
+                        <li><Link to="#">Careers</Link></li>
                     </ul>
                 </div>
                 <div className="col-md-6 item text">
@@ -29,10 +30,20 @@ const Footer = (): JSX.Element => {
                         rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
                         vel in justo.</p>
                 </div>
-                <div className="col item social"><a href="#"><i className="icon ion-social-facebook"></i></a><a
-                    href="#"><i className="icon ion-social-twitter"></i></a><a href="#"><i
-                    className="icon ion-social-snapchat"></i></a><a href="#"><i
-                    className="icon ion-social-instagram"></i></a></div>
+                <div className="col item social">
+                    <Link to="#">
+                        <i className="icon ion-social-facebook"></i>
+                    </Link>
+                    <Link to="#">
+                        <i className="icon ion-social-twitter"></i>
+                    </Link>
+                    <Link to="#">
+                        <i className="icon ion-social-snapchat"></i>
+                    </Link>
+                    <Link to="#">
+                        <i className="icon ion-social-instagram"></i>
+                    </Link>
+                </div>
             </div>
             <p className="copyright">Company Name © 2021</p>
         </Container>
