@@ -1,7 +1,9 @@
 import React from 'react'
 import {ProjectModernBase} from './ProjectModern.style'
+import {Link} from 'react-router-dom'
 
 const ProjectModern = ({
+                           id,
                            image_url,
                            title,
                            description,
@@ -9,19 +11,19 @@ const ProjectModern = ({
                        }: ProjectProps): JSX.Element => {
 
     return <ProjectModernBase md={4} sm={6}>
-        <a href="#">
+        <Link to={link}>
             <img className="img-fluid"
                  src={image_url}/>
-        </a>
+        </Link>
         <h3 className="name">
             {title}
         </h3>
         <p className="description">
             {description}
         </p>
-        <a className="action" href={link}>
+        <Link to={link} className="action">
             <i className="fa fa-arrow-circle-right"></i>
-        </a>
+        </Link>
     </ProjectModernBase>
 }
 

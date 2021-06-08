@@ -1,13 +1,13 @@
 import React from 'react'
 import {HomeBase} from "./Home.style";
-import {Feature, HeaderBlue, LatestProject, PopularProject} from "./components";
+import {Service, HeaderBlue, LatestProject, PopularProject} from "./components";
 import {Brand, Contact, Highlight, PhotoGallery, Testimonial} from '../../components/organisms';
 
 const Home = (): JSX.Element => {
     return <HomeBase>
-        <HeaderBlue/>
+
         <LatestProject/>
-        <Feature/>
+        <Service/>
         <PopularProject/>
         <Highlight/>
         <PhotoGallery/>
