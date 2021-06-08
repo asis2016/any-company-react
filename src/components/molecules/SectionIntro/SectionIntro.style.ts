@@ -4,7 +4,7 @@ export const SectionIntroBase = styled.div`
 
   font-size: 16px;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 
   h2 {
     font-weight: bold;

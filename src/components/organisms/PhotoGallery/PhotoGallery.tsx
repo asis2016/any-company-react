@@ -1,28 +1,44 @@
-import React from 'react'
-import {Row, Col, Container} from 'react-bootstrap'
+import React, {useEffect, useState} from 'react'
+import {Col, Container, Row} from 'react-bootstrap'
 import {PhotoGalleryBase} from './PhotoGallery.style'
-import {gallery} from '../../../api/db.json'
+import {SectionIntro} from '../../molecules'
+import axios from 'axios'
+import {Link} from 'react-router-dom'
 
-const PhotoGallery = (): JSX.Element => {
 
-    // @ts-ignore
+const PhotoGallery = ({
+                          title,
+                          description,
+                          fetchURL
+                      }: PhotoGalleryProps): JSX.Element => {
+
+    const [galleryData, setGalleryData] = useState<GalleryProps[]>([]);
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/api/v1/' + fetchURL).then((response) => {
+            setGalleryData(response.data)
+        })
+        return () => {
+            console.log('Photo gallery cleanup.')
+        }
+    }, [])
+
     return <PhotoGalleryBase>
         <Container>
-            <div className="intro">
-                <h2 className="text-center">
-                    Modern Architecture
-                </h2>
-                <p className="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum
-                    nibh erat, pellentesque ut laoreet vitae. </p>
-            </div>
+            <SectionIntro title={title}
+                          description={description}/>
+
             <Row className="photos" data-bss-baguettebox="">
-                {gallery.map((item, index) => {
+                {galleryData.map((item) => {
                     return (
-                        <Col lg={3} md={4} sm={6} className="item" key={index}>
-                            <a href={item.image_url}>
+                        <Col lg={3} md={4} sm={6} className="item" key={item.id}>
+                            <Link to={item.image_url}>
                                 <img className="img-fluid"
-                                     src={item.image_url}/>
-                            </a>
+                                     src={item.image_url}
+                                     title={item.title}
+                                     alt={item.title}
+                                />
+                            </Link>
                         </Col>
                     )
                 })}

@@ -13,7 +13,8 @@ const ProjectModern = ({
     return <ProjectModernBase md={4} sm={6}>
         <Link to={link}>
             <img className="img-fluid"
-                 src={image_url}/>
+                 src={image_url}
+                 alt={title}/>
         </Link>
         <h3 className="name">
             {title}

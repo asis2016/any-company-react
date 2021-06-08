@@ -24,7 +24,9 @@ const Testimonial = (): JSX.Element => {
                             </div>
                             <div className="author">
                                 <img className="rounded-circle"
-                                     src={item.image_url}/>
+                                     src={item.image_url}
+                                     alt={'title'}
+                                />
                                 <h5 className="name">
                                     {item.full_name}
                                 </h5>

@@ -11,7 +11,7 @@ const PopularProject = (): JSX.Element => {
     const [project, setProject] = useState<ProjectProps[]>([])
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v1/projectss/').then((response) => {
+        axios.get('http://127.0.0.1:8000/api/v1/projects/').then((response) => {
             setProject(response.data)
         })
         return () => console.log('PopularProject cleanup.')

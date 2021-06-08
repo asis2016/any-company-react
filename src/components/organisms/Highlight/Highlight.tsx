@@ -26,7 +26,10 @@ const Highlight = (): JSX.Element => {
                 </Col>
                 <Col md={4}>
                     <div className="d-none d-md-block phone-mockup">
-                        <img className="device" src={phoneSVG} />
+                        <img className="device"
+                             src={phoneSVG}
+                             alt={'title'}
+                        />
                         <div className="screen">
 
                         </div>

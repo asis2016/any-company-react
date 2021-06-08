@@ -3,13 +3,14 @@ import {Container, Row} from 'react-bootstrap'
 import {LatestProjectBase} from './LatestProject.style'
 import {ProjectModern, SectionIntro} from '../../../../components/molecules'
 import axios from 'axios'
+import {NoRecordsFound} from '../../../../components/organisms'
 
 const LatestProject = (): JSX.Element => {
 
     const [project, setProject] = useState<ProjectProps[]>([])
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v1/projects', {
+        axios.get('http://127.0.0.1:8000/api/v1/projects/', {
             params: {
                 _limit: 3
             }
@@ -42,10 +43,8 @@ const LatestProject = (): JSX.Element => {
                         })}
                     </Row>
                 </Fragment>
-                : <div className="warning">
-                    <p>No record found.</p>
-                    <p>See the instructions and start adding now.</p>
-                </div>}
+                : <NoRecordsFound/>
+            }
         </Container>
     </LatestProjectBase>
 }

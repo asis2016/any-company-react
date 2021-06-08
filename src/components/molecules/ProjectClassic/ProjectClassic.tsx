@@ -1,5 +1,6 @@
 import React from 'react'
 import {Col, Row} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import {ProjectClassicBase} from './ProjectClassic.style'
 
 const ProjectClassic = ({title, description, image_url, link}: ProjectProps): JSX.Element => {
@@ -7,9 +8,11 @@ const ProjectClassic = ({title, description, image_url, link}: ProjectProps): JS
     return <ProjectClassicBase sm={6}>
         <Row>
             <Col md={12} lg={5}>
-                <a href="#">
-                    <img className="img-fluid" src={image_url}/>
-                </a>
+                <Link to="#">
+                    <img className="img-fluid"
+                         src={image_url}
+                         alt={title}/>
+                </Link>
             </Col>
             <Col>
                 <h3 className="name">
