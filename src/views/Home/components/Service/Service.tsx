@@ -9,7 +9,7 @@ const Service = (): JSX.Element => {
     const [feature, setFeature] = useState<FeatureProps[]>([])
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/").then((response) => {
+        axios.get("http://127.0.0.1:8000/api/v1/services/").then((response) => {
             setFeature(response.data);
         });
         return () => {
@@ -22,7 +22,7 @@ const Service = (): JSX.Element => {
             <Container>
                 <SectionIntro
                     title="Our Best Services"
-                    description="Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. "
+                    tagline="Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. "
                 />
 
                 <Row className="justify-content-center">

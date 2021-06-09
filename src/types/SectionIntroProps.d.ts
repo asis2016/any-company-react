@@ -1,4 +1,4 @@
 interface SectionIntroProps{
     title: string
-    description: string
+    tagline: string
 }

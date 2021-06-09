@@ -1,0 +1,61 @@
+{
+  "site": [
+    {
+      "site_title": "AM Builders",
+      "site_tagline": "We build homes.",
+      "site_logo_url": "www.com"
+    }
+  ],
+  "landing_page": {
+    "latest_project": [
+      {
+        "visible": "true",
+        "limit": "10"
+      }
+    ],
+    "gallery": {
+      "intro_title": "Modern Architectures",
+      "intro_tagline": "Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.",
+      "visible": "true",
+      "limit": "10",
+      "fetch_url": "galleries"
+    },
+    "testimonials": [
+      {
+        "visible": "true",
+        "limit": "3"
+      }
+    ],
+    "brands": {
+      "visible": "true",
+      "limit": "6"
+    },
+    "contact": [
+      {
+        "visible": "true"
+      }
+    ]
+  },
+  "social_media": [
+    {
+      "facebook": [
+        {
+          "visible": "true",
+          "link": "facebook.com"
+        }
+      ],
+      "twitter": [
+        {
+          "visible": "true",
+          "link": "twitter.com"
+        }
+      ],
+      "instagram": [
+        {
+          "visible": "true",
+          "link": "Instagram.com"
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,15 @@ import {HomeBase} from "./Home.style";
 import {LatestProject, PopularProject, Service} from "./components";
 import {Brand, Contact, Highlight, PhotoGallery, Testimonial} from '../../components/organisms';
 
+import {landing_page} from '../../api/settings.json'
+
 const Home = (): JSX.Element => {
+
+    const settings = {
+        brand: landing_page['brands'],
+        gallery: landing_page['gallery'],
+    }
+
     return <HomeBase>
 
         <LatestProject/>
@@ -11,9 +19,9 @@ const Home = (): JSX.Element => {
         <PopularProject/>
         <Highlight/>
 
-        <PhotoGallery title="Modern Architecture"
-                      fetchURL='galleries'
-                      description="Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. "/>
+        <PhotoGallery title={settings.gallery.intro_title}
+                      fetchURL={settings.gallery.fetch_url}
+                      description={settings.gallery.intro_tagline}/>
 
         <Testimonial/>
         <Brand/>

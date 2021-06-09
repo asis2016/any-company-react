@@ -28,7 +28,7 @@ const LatestProject = (): JSX.Element => {
             {project.length > 0 ?
                 <Fragment>
                     <SectionIntro title="Latest Projects (Modern Houses)"
-                                  description="Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibherat, pellentesque ut laoreet vitae."/>
+                                  tagline="Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibherat, pellentesque ut laoreet vitae."/>
 
                     <Row>
                         {project.map((item, index) => {

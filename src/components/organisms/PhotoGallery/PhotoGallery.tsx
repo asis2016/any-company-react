@@ -4,6 +4,7 @@ import {PhotoGalleryBase} from './PhotoGallery.style'
 import {SectionIntro} from '../../molecules'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import {landing_page} from '../../../api/settings.json'
 
 
 const PhotoGallery = ({
@@ -14,10 +15,15 @@ const PhotoGallery = ({
 
     const [galleryData, setGalleryData] = useState<GalleryProps[]>([]);
 
+
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v1/' + fetchURL).then((response) => {
-            setGalleryData(response.data)
-        })
+        axios.get('http://127.0.0.1:8000/api/v1/' + fetchURL)
+            .then((response) => {
+                setGalleryData(response.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
         return () => {
             console.log('Photo gallery cleanup.')
         }
@@ -25,8 +31,9 @@ const PhotoGallery = ({
 
     return <PhotoGalleryBase>
         <Container>
+
             <SectionIntro title={title}
-                          description={description}/>
+                          tagline={description}/>
 
             <Row className="photos" data-bss-baguettebox="">
                 {galleryData.map((item) => {

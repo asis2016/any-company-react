@@ -22,7 +22,7 @@ const PopularProject = (): JSX.Element => {
             {project && project.length > 0 ? (
                     <Fragment>
                         <SectionIntro title="Popular Projects"
-                                      description="Nunc luctus in metus eget fringilla. Aliquam sed justo ligula Vestibulum."/>
+                                      tagline="Nunc luctus in metus eget fringilla. Aliquam sed justo ligula Vestibulum."/>
 
                         <Row>
                             {project.map((item, index) => {

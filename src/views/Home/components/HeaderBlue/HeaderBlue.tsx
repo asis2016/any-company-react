@@ -31,22 +31,20 @@ const HeaderBlue = (): JSX.Element => {
                                 </Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="dropdown-toggle nav-link"
-                                   aria-expanded="false"
-                                   data-bs-toggle="dropdown"
-                                   href="#">
+                                <Link className="dropdown-toggle nav-link"
+                                      to="#">
                                     Dropdown{" "}
-                                </a>
+                                </Link>
                                 <div className="dropdown-menu">
-                                    <a className="dropdown-item" href="#">
+                                    <Link className="dropdown-item" to="#">
                                         First Items
-                                    </a>
-                                    <a className="dropdown-item" href="#">
+                                    </Link>
+                                    <Link className="dropdown-item" to="#">
                                         Second Item
-                                    </a>
-                                    <a className="dropdown-item" href="#">
+                                    </Link>
+                                    <Link className="dropdown-item" to="#">
                                         Third Item
-                                    </a>
+                                    </Link>
                                 </div>
                             </li>
                         </ul>
