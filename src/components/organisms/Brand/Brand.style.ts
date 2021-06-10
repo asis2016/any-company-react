@@ -1,26 +1,19 @@
 import styled from 'styled-components'
 
 export const BrandBase = styled.div`
-  /* brands */ {
   color: #313437;
   background-color: #fff;
-}
+  display: block;
+  text-align: center;
+  padding: 40px 0;
 
-  a {
-    display: block;
-    text-align: center;
-    padding: 40px 0;
-  }
-
-  @media (max-width: 767px) {
-    a {
-      padding: 30px 0;
-    }
-  }
-
-  a img {
+  img {
     display: inline-block;
     margin: 10px 20px;
     vertical-align: middle;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 0;
   }
 `
