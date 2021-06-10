@@ -1,12 +1,18 @@
-import React from 'react' 
-import {HeaderBase} from './Header.style' 
+import React from 'react'
+import {Navigation} from '../../../../components/organisms'
+import {HeaderBase} from './Header.style'
 
-const Header = (): JSX.Element => { 
-
-return <HeaderBase> 
-{/* todo */} 
-<h1>Header is here. </h1> 
-</HeaderBase> 
-} 
+/***
+ * A header component (layouts > Main > components).
+ * @param props
+ * @constructor
+ */
+const Header = (props: any): JSX.Element => {
+    return <HeaderBase>
+        <Navigation brandName="AM Builderss"
+        />
+        {props.children}
+    </HeaderBase>
+}
 
 export default Header

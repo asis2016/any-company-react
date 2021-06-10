@@ -1,9 +1,30 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import {FooterBase} from './Footer.style'
+import {site, social_media} from '../../../../api/settings.json'
+import axios from 'axios'
 
+/***
+ * The footer component.
+ * @constructor
+ */
 const Footer = (): JSX.Element => {
+
+    const [siteSetting, setSiteSetting] = useState<SiteSettingProps[]>([])
+
+    useEffect(() => {
+        axios.get('site')
+            .then((response) => {
+                setSiteSetting(response.data)
+            })
+        return () => {
+            console.log('Footer clean up.')
+        }
+    }, [])
+
+    console.log(site['site_title'])
+
 
     return <FooterBase>
         <Container>
@@ -25,25 +46,28 @@ const Footer = (): JSX.Element => {
                     </ul>
                 </div>
                 <div className="col-md-6 item text">
-                    <h3>Company Name</h3>
-                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
-                        rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
-                        vel in justo.</p>
+                    <h3>{site['site_title']}</h3>
+                    <h6>{site['site_tagline']}</h6>
+                    <p>
+                        {site['site_description']}
+                    </p>
                 </div>
-                <div className="col item social">
-                    <Link to="#">
-                        <i className="icon ion-social-facebook"></i>
-                    </Link>
-                    <Link to="#">
-                        <i className="icon ion-social-twitter"></i>
-                    </Link>
-                    <Link to="#">
-                        <i className="icon ion-social-snapchat"></i>
-                    </Link>
-                    <Link to="#">
-                        <i className="icon ion-social-instagram"></i>
-                    </Link>
-                </div>
+                {social_media['footer_visible'] === "true" ?
+                    <div className="col item social">
+                        <Link to="#">
+                            <i className="icon ion-social-facebook"></i>
+                        </Link>
+                        <Link to="#">
+                            <i className="icon ion-social-twitter"></i>
+                        </Link>
+                        <Link to="#">
+                            <i className="icon ion-social-snapchat"></i>
+                        </Link>
+                        <Link to="#">
+                            <i className="icon ion-social-instagram"></i>
+                        </Link>
+                    </div> : <div></div>
+                }
             </div>
             <p className="copyright">Company Name © 2021</p>
         </Container>
