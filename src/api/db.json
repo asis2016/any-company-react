@@ -1,11 +1,14 @@
 {
-  "landingpage": [
-    {
-      "id": "section-project",
-      "visible": "true",
-      "title": "Our Best Services"
+  "landingpage": {
+    "header": {
+      "id": "1",
+      "title": "Welcome to AM Builders",
+      "tagline": "Mauris egestas tellus non ex condimentum, ac ullamcorper sapien dictum. Nam consequat neque quis sapien viverra convallis. In non tempus lorem.",
+      "image_url": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/screen-content-phone.jpg",
+      "link_text": "Learn More",
+      "link": "#"
     }
-  ],
+  },
   "latestproject": [
     {
       "id": "1",

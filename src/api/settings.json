@@ -1,11 +1,10 @@
 {
-  "site": [
-    {
-      "site_title": "AM Builders",
-      "site_tagline": "We build homes.",
-      "site_logo_url": "www.com"
-    }
-  ],
+  "site": {
+    "site_title": "AM Builders",
+    "site_tagline": "We build homes.",
+    "site_logo_url": "www.com",
+    "site_description": "Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo."
+  },
   "landing_page": {
     "latest_project": [
       {
@@ -23,9 +22,18 @@
     "testimonials": [
       {
         "visible": "true",
-        "limit": "3"
+        "limit": "3",
+        "fetch_url": "testimonials"
       }
     ],
+    "highlight": {
+      "visible": "true",
+      "featured_image": "yo",
+      "title": "Highlights of 2021",
+      "tagline": "Experience the Unforgetable Visit Ever. Lorem ipsum Nullam id dolor id nibh ultricies vehicula ut id elit.",
+      "link": "#",
+      "linkText": "Start exploring"
+    },
     "brands": {
       "visible": "true",
       "limit": "6"
@@ -36,26 +44,29 @@
       }
     ]
   },
-  "social_media": [
-    {
-      "facebook": [
-        {
-          "visible": "true",
-          "link": "facebook.com"
-        }
-      ],
-      "twitter": [
-        {
-          "visible": "true",
-          "link": "twitter.com"
-        }
-      ],
-      "instagram": [
-        {
-          "visible": "true",
-          "link": "Instagram.com"
-        }
-      ]
-    }
-  ]
+  "social_media": {
+    "footer_visible": "true",
+    "lists": [
+      {
+        "facebook": [
+          {
+            "visible": "true",
+            "link": "facebook.com"
+          }
+        ],
+        "twitter": [
+          {
+            "visible": "true",
+            "link": "twitter.com"
+          }
+        ],
+        "instagram": [
+          {
+            "visible": "true",
+            "link": "Instagram.com"
+          }
+        ]
+      }
+    ]
+  }
 }
