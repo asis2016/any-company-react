@@ -28,7 +28,10 @@ const Single = (): JSX.Element => {
                                 {detail['posted_date']}
                             </span>
                         </p>
-                        <img className="img-fluid featured-image" src={detail['image_url']}/>
+                        <img className="img-fluid featured-image"
+                             src={detail['image_url']}
+                             alt={'alt'}
+                        />
                     </div>
 
                     <div className="text">
@@ -45,7 +48,9 @@ const Single = (): JSX.Element => {
                             quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum
                             ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
                         <figure className="figure d-block">
-                            <img className="figure-img" src="assets/img/beach.jpg"/>
+                            <img className="figure-img" 
+                                 src="assets/img/beach.jpg"
+                                 alt={'alt'}/>
                             <figcaption className="figure-caption">Caption</figcaption>
                         </figure>
                         <p>

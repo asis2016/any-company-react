@@ -1,10 +1,13 @@
 import React from 'react'
 import {HomeBase} from "./Home.style";
-import {LatestProject, PopularProject, Service} from "./components";
+import {HeaderLandingPage, LatestProject, PopularProject, Service} from "./components";
 import {Brand, Contact, Highlight, PhotoGallery, Testimonial} from '../../components/organisms';
-
 import {landing_page} from '../../api/settings.json'
+import {Header} from '../../layouts/Main/components';
 
+/**
+ * Home component is used for the landing page.
+ * */
 const Home = (): JSX.Element => {
 
     const settings = {
@@ -13,7 +16,9 @@ const Home = (): JSX.Element => {
     }
 
     return <HomeBase>
-
+        <Header>
+            <HeaderLandingPage/>
+        </Header>
         <LatestProject/>
         <Service/>
         <PopularProject/>
@@ -23,7 +28,7 @@ const Home = (): JSX.Element => {
                       fetchURL={settings.gallery.fetch_url}
                       description={settings.gallery.intro_tagline}/>
 
-        <Testimonial/>
+        <Testimonial fetchURL="testimonials"/>
         <Brand/>
         <Contact/>
     </HomeBase>
