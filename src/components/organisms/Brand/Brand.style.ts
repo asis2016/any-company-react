@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const BrandBase = styled.div`
-  color: #313437;
   background-color: #fff;
   display: block;
   text-align: center;

@@ -1,14 +1,13 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {SingleBase} from './Single.style'
 import {Link, useParams} from 'react-router-dom'
 import {Col, Container, Row} from 'react-bootstrap'
-import {latestproject} from '../../api/db.json'
+
 
 const Single = (): JSX.Element => {
     let {id}: any = useParams()
 
-    const detail = latestproject.filter(item => item.id === id)[0]
-    console.log(detail)
+    const [content, setContent] = useState<ProjectProps[]>([])
 
     return <SingleBase>
         <Container>
@@ -17,19 +16,19 @@ const Single = (): JSX.Element => {
 
                     <div className="intro">
                         <h1 className="text-center">
-                            {detail['title']}
+                            {/*todo title*/}
                         </h1>
                         <p className="text-center">
                             <span className="by">by</span>
                             <Link to="#">
-                                {detail['author']}
+                                {/* todo: author*/}
                             </Link>
                             <span className="date">
-                                {detail['posted_date']}
+                                {/* todo: posted date*/}
                             </span>
                         </p>
                         <img className="img-fluid featured-image"
-                             src={detail['image_url']}
+                             src={''}
                              alt={'alt'}
                         />
                     </div>
@@ -48,7 +47,7 @@ const Single = (): JSX.Element => {
                             quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum
                             ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
                         <figure className="figure d-block">
-                            <img className="figure-img" 
+                            <img className="figure-img"
                                  src="assets/img/beach.jpg"
                                  alt={'alt'}/>
                             <figcaption className="figure-caption">Caption</figcaption>

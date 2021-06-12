@@ -1,27 +1,22 @@
 import React from 'react'
 import {BrandBase} from './Brand.style'
-import {brands} from '../../../api/db.json'
 
 /**
  * A Brand component represents associated brands with your company.
+ *
+ * @returns A JSX.Element
  * */
-const Brand = ({
-                   id,
-                   title,
-                   image_url,
-                   description,
-                   external_link
-               }: BrandProps): JSX.Element => {
-
-    return <BrandBase>
-        {brands.map((item, index) => {
-            return (
-                <img src={item.image_url}
-                     alt={'title'}
-                     key={index}/>
-            )
-        })}
-    </BrandBase>
-}
+const Brand = ({responseData}: BrandProps): JSX.Element => {
+    return (
+        <BrandBase>
+            {responseData.map((item: any, index: number) => {
+                return <img src={item['image_url']}
+                            alt={item['title']}
+                            title={item['title']}
+                            key={index}/>;
+            })}
+        </BrandBase>
+    );
+};
 
 export default Brand

@@ -24,13 +24,13 @@ export const HighlightBase = styled.div`
     font-size: 18px;
     max-width: 500px;
     line-height: 1.5;
-    
-    p{
+
+    p {
       margin-bottom: 35px;
     }
   }
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     text-align: center;
     .intro {
       max-width: none;
@@ -63,7 +63,7 @@ export const HighlightBase = styled.div`
       background-size: cover;
       background-position: center;
       z-index: -1;
-      
+
       &:before {
         content: '';
         background-color: #fff;
