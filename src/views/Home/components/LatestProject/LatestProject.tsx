@@ -5,15 +5,17 @@ import {ProjectModern, SectionIntro} from '../../../../components/molecules'
 import axios from 'axios'
 import {NoRecordsFound} from '../../../../components/organisms'
 
+
+/***
+ * A Latest project component inherts projects.
+ * @constructor
+ */
 const LatestProject = (): JSX.Element => {
 
     const [project, setProject] = useState<ProjectProps[]>([])
 
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/api/v1/projects/', {
-            params: {
-                _limit: 3
-            }
         }).then((response) => {
             setProject(response.data)
         })
