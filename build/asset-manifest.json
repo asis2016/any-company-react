@@ -1,27 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.f1672172.chunk.css",
-    "main.js": "/static/js/main.d11ed0e7.chunk.js",
-    "main.js.map": "/static/js/main.d11ed0e7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.acd6118d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.acd6118d.js.map",
-    "static/js/2.e71fe791.chunk.js": "/static/js/2.e71fe791.chunk.js",
-    "static/js/2.e71fe791.chunk.js.map": "/static/js/2.e71fe791.chunk.js.map",
-    "static/js/3.87b535dd.chunk.js": "/static/js/3.87b535dd.chunk.js",
-    "static/js/3.87b535dd.chunk.js.map": "/static/js/3.87b535dd.chunk.js.map",
+    "main.css": "/static/css/main.ad204220.chunk.css",
+    "main.js": "/static/js/main.b62a450b.chunk.js",
+    "main.js.map": "/static/js/main.b62a450b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.39d837ee.js",
+    "runtime-main.js.map": "/static/js/runtime-main.39d837ee.js.map",
+    "static/js/2.4aea7e5e.chunk.js": "/static/js/2.4aea7e5e.chunk.js",
+    "static/js/2.4aea7e5e.chunk.js.map": "/static/js/2.4aea7e5e.chunk.js.map",
+    "static/js/3.56cb5115.chunk.js": "/static/js/3.56cb5115.chunk.js",
+    "static/js/3.56cb5115.chunk.js.map": "/static/js/3.56cb5115.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.f1672172.chunk.css.map": "/static/css/main.f1672172.chunk.css.map",
-    "static/js/2.e71fe791.chunk.js.LICENSE.txt": "/static/js/2.e71fe791.chunk.js.LICENSE.txt",
-    "static/media/bg-main-1.479314e4.jpg": "/static/media/bg-main-1.479314e4.jpg",
+    "static/css/main.ad204220.chunk.css.map": "/static/css/main.ad204220.chunk.css.map",
+    "static/js/2.4aea7e5e.chunk.js.LICENSE.txt": "/static/js/2.4aea7e5e.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.f691f37e.woff",
     "static/media/ionicons.min.css": "/static/media/ionicons.b45d332f.svg",
     "static/media/phone.41dc2028.svg": "/static/media/phone.41dc2028.svg",
     "static/media/screen-content-phone.9f1d8b2a.jpg": "/static/media/screen-content-phone.9f1d8b2a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.acd6118d.js",
-    "static/js/2.e71fe791.chunk.js",
-    "static/css/main.f1672172.chunk.css",
-    "static/js/main.d11ed0e7.chunk.js"
+    "static/js/runtime-main.39d837ee.js",
+    "static/js/2.4aea7e5e.chunk.js",
+    "static/css/main.ad204220.chunk.css",
+    "static/js/main.b62a450b.chunk.js"
   ]
 }
