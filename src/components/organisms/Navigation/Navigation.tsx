@@ -15,9 +15,9 @@ interface NavigationProps {
 const Navigation = ({brandName, children}: NavigationProps): JSX.Element => {
 
     const menu = [
-        ['#', 'Home'],
-        ['#', 'Blog'],
-        ['#', 'Projects'],
+        ['/', 'Home'],
+        ['/blog/', 'Blog'],
+        ['/projects/', 'Projects'],
         ['#', 'About us'],
         ['#', 'Contact us'],
     ]
@@ -26,7 +26,8 @@ const Navigation = ({brandName, children}: NavigationProps): JSX.Element => {
         <nav className="navbar navbar-dark navbar-expand-md navigation-clean-search">
             <Container fluid>
                 <Link to="/" className="navbar-brand">
-                    {brandName}
+                    {/*{brandName}*/}
+                    AM Builders
                 </Link>
                 <button data-bs-toggle="collapse"
                         className="navbar-toggler"
@@ -39,7 +40,7 @@ const Navigation = ({brandName, children}: NavigationProps): JSX.Element => {
                         {menu.map((item, index) => {
                             return (
                                 <li className="nav-item" key={index}>
-                                    <Link to='#' className="nav-link">
+                                    <Link to={item[0]} className="nav-link">
                                         {item[1]}
                                     </Link>
                                 </li>

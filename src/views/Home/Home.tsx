@@ -13,17 +13,18 @@ import {Header} from '../../layouts/Main/components';
 const Home = (): JSX.Element => {
 
     const settings = {
-        brand: landing_page['brand'],
-        photoGallery: landing_page['photo_gallery'],
-        latestProject: landing_page['latest_project'],
-        popularProject: landing_page['popular_project'],
-        testimonial: landing_page['testimonial'],
-        service: landing_page['service']
+        brand: landing_page.brand,
+        header: landing_page.header,
+        photoGallery: landing_page.photo_gallery,
+        latestProject: landing_page.latest_project,
+        popularProject: landing_page.popular_project,
+        testimonial: landing_page.testimonial,
+        service: landing_page.service
     }
 
     return (
         <HomeBase>
-            <Header>
+            <Header bg={settings.header.bg}>
                 <HeaderLandingPage/>
             </Header>
             <LatestProject api={settings.latestProject.api}
@@ -51,12 +52,12 @@ const Home = (): JSX.Element => {
                          limit={settings.testimonial.limit}
                          title={settings.testimonial.title}
                          tagline={settings.testimonial.tagline}/>
-            
+
             <Brand api={settings.brand.api}
                    limit={settings.brand.limit}
                    title={settings.brand.title}
                    tagline={settings.brand.tagline}/>
-            
+
             <Contact/>
         </HomeBase>
     );

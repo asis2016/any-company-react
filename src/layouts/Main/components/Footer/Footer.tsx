@@ -15,16 +15,9 @@ const Footer = (): JSX.Element => {
 
     useEffect(() => {
         axios.get('site')
-            .then((response) => {
-                setSiteSetting(response.data)
-            })
-        return () => {
-            console.log('Footer clean up.')
-        }
+            .then(response => setSiteSetting(response.data))
+        // eslint-disable-next-line
     }, [])
-
-    console.log(site['site_title'])
-
 
     return <FooterBase>
         <Container>

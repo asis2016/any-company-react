@@ -2,62 +2,74 @@ import React, {useEffect, useState} from 'react'
 import {SingleBase} from './Single.style'
 import {Link, useParams} from 'react-router-dom'
 import {Col, Container, Row} from 'react-bootstrap'
+import axios from 'axios'
+import {Header} from '../../layouts/Main/components'
+import {blog as blogSetting} from '../../api/settings.json'
+import {HeaderOtherPage} from '../../components/atoms'
 
+interface DataProps {
+    id: string
+    title: string
+    image_url: string
+    content: any
+    created: string
+    modified: string
+}
 
+/**
+ * A single view.
+ *
+ * @constructor
+ */
 const Single = (): JSX.Element => {
     let {id}: any = useParams()
 
-    const [content, setContent] = useState<ProjectProps[]>([])
+    const initialData: DataProps = {
+        id: '',
+        title: '',
+        image_url: '',
+        content: '',
+        created: '',
+        modified: ''
+    }
+
+    const [data, setData] = useState(initialData)
+
+    useEffect(() => {
+        axios.get(`http://127.0.0.1:8000/api/v1/projects/${id}`)
+            .then(response => {
+                setData(response.data)
+            })
+        // eslint-disable-next-line
+    }, [])
+
+    const settings = {
+        header: blogSetting.header
+    }
 
     return <SingleBase>
+        <Header bg={settings.header.bg}>
+            <HeaderOtherPage title={'a'} tagline={'b'}/>
+        </Header>
         <Container>
             <Row>
-                <Col className="offset-lg-1 offset-xl-2">
-
+                <Col>
                     <div className="intro">
-                        <h1 className="text-center">
-                            {/*todo title*/}
-                        </h1>
-                        <p className="text-center">
+                        <h1>{data.title}</h1>
+                        <p>
                             <span className="by">by</span>
                             <Link to="#">
                                 {/* todo: author*/}
                             </Link>
                             <span className="date">
-                                {/* todo: posted date*/}
+                                {data.modified}
                             </span>
                         </p>
-                        <img className="img-fluid featured-image"
-                             src={''}
-                             alt={'alt'}
-                        />
+                        <img className="img-fluid"
+                             src={data.image_url}
+                             alt={'alt'}/>
                     </div>
-
-                    <div className="text">
-                        <p>Sed lobortis mi. Suspendisse vel placerat ligula.
-                            ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget
-                            velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et
-                            ultrices posuere cubilia Curae.</p>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac lacus. <strong>Ut
-                            vehicula rhoncus</strong> elementum. Etiam quis tristique lectus. Aliquam in arcu eget
-                            velit <em>pulvinar dict</em> vel in justo. Vestibulum ante ipsum primis in faucibus orci
-                            luctus et ultrices posuere cubilia Curae.</p>
-                        <h2>Aliquam In Arcu </h2>
-                        <p>Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam
-                            quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum
-                            ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-                        <figure className="figure d-block">
-                            <img className="figure-img"
-                                 src="assets/img/beach.jpg"
-                                 alt={'alt'}/>
-                            <figcaption className="figure-caption">Caption</figcaption>
-                        </figure>
-                        <p>
-                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-                            Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam
-                            quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.
-                        </p>
-                    </div>
+                    <div className="content" dangerouslySetInnerHTML={{__html: data.content}}/>
                 </Col>
             </Row>
         </Container>

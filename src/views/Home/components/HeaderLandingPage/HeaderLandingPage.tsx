@@ -30,7 +30,8 @@ const HeaderLandingPage = (): JSX.Element => {
                  className=" d-none d-lg-block phone-holder">
                 {/* todo: should be static image rather than absolute / relative image. */}
                 <div className="phone-mockup">
-                    <img className="device"
+                    <img alt={'title'}
+                         className="device"
                          src="https://amaharjan.com/projects/any-company/assets/images/phone.svg"/>
                     <div className="screen"></div>
                 </div>

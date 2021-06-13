@@ -4,13 +4,13 @@ import {HeaderBase} from './Header.style'
 
 /***
  * A header component (layouts > Main > components).
+ *
  * @param props
  * @constructor
  */
 const Header = (props: any): JSX.Element => {
-    return <HeaderBase>
-        <Navigation brandName="AM Builderss"
-        />
+    return <HeaderBase bg={props.bg}>
+        <Navigation/>
         {props.children}
     </HeaderBase>
 }

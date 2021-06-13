@@ -6,6 +6,9 @@
     "site_description": "Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo."
   },
   "landing_page": {
+    "header": {
+      "bg": "https://raw.githubusercontent.com/asis2016/any-company-react/main/src/assets/images/bg-main-1.jpg"
+    },
     "brand": {
       "api": "brands",
       "limit": 8,
@@ -57,6 +60,16 @@
         "visible": "true"
       }
     ]
+  },
+  "blog": {
+    "header": {
+      "bg": "https://images.unsplash.com/photo-1488707872600-5507977fe355?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"
+    }
+  },
+  "project": {
+    "header": {
+      "bg": "https://images.unsplash.com/photo-1488707872600-5507977fe355?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"
+    }
   },
   "social_media": {
     "footer_visible": "true",
