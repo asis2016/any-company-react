@@ -2,10 +2,10 @@ import React, {useEffect, useState} from 'react'
 import {SingleBase} from './Single.style'
 import {useParams} from 'react-router-dom'
 import {Col, Container, Row} from 'react-bootstrap'
-import axios from 'axios'
 import {Header} from '../../layouts/Main/components'
 import {blog as blogSetting} from '../../api/settings.json'
 import {HeaderOtherPage} from '../../components/atoms'
+import {axiosInstance} from '../../helpers'
 
 interface DataProps {
     id: string
@@ -36,10 +36,9 @@ const Single = (): JSX.Element => {
     const [data, setData] = useState(initialData)
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/v1/projects/${id}`)
-            .then(response => {
-                setData(response.data)
-            })
+        axiosInstance.get(`projects/${id}`)
+            .then(response => setData(response.data))
+            .catch(err => console.log(err))
         // eslint-disable-next-line
     }, [])
 

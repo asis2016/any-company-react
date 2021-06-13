@@ -3,16 +3,17 @@ import {Container, Row} from 'react-bootstrap'
 import {ProjectModern} from '../../components/molecules'
 import {Header} from '../../layouts/Main/components'
 import {ProjectBase} from './Project.style'
-import axios from 'axios'
 import {HeaderOtherPage} from '../../components/atoms'
 import {project as projectSetting} from '../../api/settings.json'
+import {axiosInstance} from '../../helpers'
 
 const Project = (): JSX.Element => {
 
     const [project, setProject] = useState<ProjectProps[]>([])
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v1/projects/')
+        axiosInstance.get('projects/')
             .then(response => setProject(response.data))
+            .catch(err => console.log('err Project.tsx', err))
     }, [])
 
     const setting = {
