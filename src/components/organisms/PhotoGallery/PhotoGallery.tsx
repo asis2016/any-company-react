@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {Col, Container, Row} from 'react-bootstrap'
 import {PhotoGalleryBase} from './PhotoGallery.style'
 import {SectionIntro} from '../../molecules'
-import axios from 'axios'
 import {Link} from 'react-router-dom'
+import {axiosInstance} from '../../../helpers'
 
 /***
  * A photo gallery component for the landing page.
@@ -24,7 +24,7 @@ const PhotoGallery = ({
     const [gallery, setGallery] = useState<GalleryProps[]>([]);
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/v1/${api}/`)
+        axiosInstance.get(`${api}/`)
             .then(response => setGallery(response.data))
             .catch(err => console.log(err))
         // eslint-disable-next-line

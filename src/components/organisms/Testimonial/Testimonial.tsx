@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {TestimonialBase} from './Testimonial.style'
 import {Col, Container, Row} from 'react-bootstrap'
-import axios from 'axios'
 import {SectionIntro} from '../../molecules'
+import {axiosInstance} from '../../../helpers'
 
 /***
  * The testimonial component.
@@ -17,8 +17,9 @@ const Testimonial = ({api, limit, title, tagline}: LandingPageComponentProps): J
     const [testimonials, setTestimonials] = useState<TestimonialProps[]>([])
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/v1/${api}/`)
+        axiosInstance.get(`${api}/`)
             .then(response => setTestimonials(response.data))
+            .catch(err => console.log('Testimonial.tsx: ', err))
         // eslint-disable-next-line
     }, [])
 

@@ -1,10 +1,10 @@
-import axios from 'axios';
 import React, {useEffect, useState} from 'react'
+import {axiosInstance} from '../../../helpers';
 import {BrandBase} from './Brand.style'
 
 /**
  * A Brand component represents associated brands with your company.
- * 
+ *
  * @param api
  * @param limit
  * @param title
@@ -16,8 +16,9 @@ const Brand = ({api, limit, title, tagline}: LandingPageComponentProps): JSX.Ele
     const [brand, setBrand] = useState<BrandProps[]>([])
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/v1/${api}/`)
+        axiosInstance.get(`${api}/`)
             .then(response => setBrand(response.data))
+            .catch(err => console.log('Brand.tsx: ', err))
         // eslint-disable-next-line
     }, [])
 

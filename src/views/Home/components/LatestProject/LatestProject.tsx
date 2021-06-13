@@ -2,8 +2,8 @@ import React, {Fragment, useEffect, useState} from 'react'
 import {Container, Row} from 'react-bootstrap'
 import {LatestProjectBase} from './LatestProject.style'
 import {ProjectModern, SectionIntro} from '../../../../components/molecules'
-import axios from 'axios'
 import {NoRecordsFound} from '../../../../components/organisms'
+import {axiosInstance} from '../../../../helpers'
 
 
 /***
@@ -25,8 +25,9 @@ const LatestProject = ({
     const [project, setProject] = useState<ProjectProps[]>([])
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/v1/${api}/`)
+        axiosInstance.get(`${api}/`)
             .then(response => setProject(response.data))
+            .catch(err => console.log('LatestProject.tsx: ', err))
         // eslint-disable-next-line
     }, [])
 

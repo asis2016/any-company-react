@@ -2,8 +2,8 @@ import React, {Fragment, useEffect, useState} from 'react'
 import {Container, Row} from 'react-bootstrap'
 import {PopularProjectBase} from './PopularProject.style'
 import {ProjectClassic, SectionIntro} from '../../../../components/molecules'
-import axios from 'axios'
 import {NoRecordsFound} from '../../../../components/organisms'
+import {axiosInstance} from '../../../../helpers'
 
 /**
  * Returns popular project component for landing page.
@@ -24,8 +24,9 @@ const PopularProject = ({
     const [project, setProject] = useState<ProjectProps[]>([])
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/v1/${api}/`)
+        axiosInstance.get(`${api}/`)
             .then(response => setProject(response.data))
+            .catch(err => console.log('PopularProject.tsx: ', err))
         // eslint-disable-next-line
     }, [])
 
