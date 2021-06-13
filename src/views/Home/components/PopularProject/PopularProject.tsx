@@ -5,41 +5,50 @@ import {ProjectClassic, SectionIntro} from '../../../../components/molecules'
 import axios from 'axios'
 import {NoRecordsFound} from '../../../../components/organisms'
 
-
-const PopularProject = (): JSX.Element => {
+/**
+ * Returns popular project component for landing page.
+ *
+ * @param api
+ * @param limit
+ * @param title
+ * @param tagline
+ * @constructor
+ */
+const PopularProject = ({
+                            api,
+                            limit,
+                            title,
+                            tagline
+                        }: LandingPageComponentProps): JSX.Element => {
 
     const [project, setProject] = useState<ProjectProps[]>([])
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/v1/projects/').then((response) => {
-            setProject(response.data)
-        })
-        return () => console.log('PopularProject cleanup.')
+        axios.get(`http://127.0.0.1:8000/api/v1/${api}/`)
+            .then(response => setProject(response.data))
+        // eslint-disable-next-line
     }, [])
 
     return <PopularProjectBase>
         <Container>
             {project && project.length > 0 ? (
                     <Fragment>
-                        <SectionIntro title="Popular Projects"
-                                      tagline="Nunc luctus in metus eget fringilla. Aliquam sed justo ligula Vestibulum."/>
+                        <SectionIntro title={title} tagline={tagline}/>
 
                         <Row>
-                            {project.map((item, index) => {
+                            {project.slice(0, limit).map((item, index) => {
                                 return (
                                     <ProjectClassic title={item.title}
                                                     description={item.description}
                                                     image_url={item.image_url}
                                                     link={'#'}
                                                     key={index}/>
-
                                 )
                             })}
                         </Row>
                     </Fragment>
                 )
                 : <NoRecordsFound/>
-
             }
         </Container>
     </PopularProjectBase>

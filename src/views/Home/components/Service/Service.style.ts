@@ -7,5 +7,6 @@ export const ServiceBase = styled(Col)`
 
   .row {
     padding: 50px 0;
+    justify-content: center;
   }
 `;

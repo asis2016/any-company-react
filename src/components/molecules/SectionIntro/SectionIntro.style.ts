@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const SectionIntroBase = styled.div`
-
   font-size: 16px;
   max-width: 500px;
   margin: 0 auto 40px;
@@ -11,11 +10,13 @@ export const SectionIntroBase = styled.div`
     margin-bottom: 40px;
     padding-top: 40px;
     color: inherit;
+    text-align: center;
   }
   
   p {
     color: #7d8285;
     margin-bottom: 0;
+    text-align: center;
   }
 
   @media (max-width: 767px) {
@@ -25,6 +26,4 @@ export const SectionIntroBase = styled.div`
       font-size: 24px;
     }
   }
-  
-
 `;

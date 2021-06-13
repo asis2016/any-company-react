@@ -1,13 +1,23 @@
 import React from 'react'
 import {SectionIntroBase} from './SectionIntro.style'
 
-const SectionIntro = ({title, tagline}: SectionIntroProps): JSX.Element => {
+/***
+ * The section introduction component.
+ *
+ * @param title
+ * @param tagline
+ * @constructor
+ */
+const SectionIntro = ({
+                          title,
+                          tagline
+                      }: SectionIntroProps): JSX.Element => {
     return (
         <SectionIntroBase>
-            <h2 className="text-center">
+            <h2>
                 {title}
             </h2>
-            <p className="tagline">
+            <p>
                 {tagline}
             </p>
         </SectionIntroBase>

@@ -1,21 +1,24 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {HomeBase} from "./Home.style";
-import {Brand, HeaderLandingPage, LatestProject, PopularProject, Service} from "./components";
-import {Contact, Highlight, PhotoGallery, Testimonial} from '../../components/organisms';
+import {HeaderLandingPage, LatestProject, PopularProject, Service} from "./components";
+import {Brand, Contact, Highlight, PhotoGallery, Testimonial} from '../../components/organisms';
 import {landing_page} from '../../api/settings.json'
 import {Header} from '../../layouts/Main/components';
-import axios from 'axios';
 
 /**
  * The Home component is used for the landing page.
  *
- * @returns A JSX.Element
+ * @constructor
  */
 const Home = (): JSX.Element => {
 
     const settings = {
-        brand: landing_page['brands'],
-        gallery: landing_page['gallery'],
+        brand: landing_page['brand'],
+        photoGallery: landing_page['photo_gallery'],
+        latestProject: landing_page['latest_project'],
+        popularProject: landing_page['popular_project'],
+        testimonial: landing_page['testimonial'],
+        service: landing_page['service']
     }
 
     return (
@@ -23,17 +26,37 @@ const Home = (): JSX.Element => {
             <Header>
                 <HeaderLandingPage/>
             </Header>
-            <LatestProject/>
-            <Service/>
-            <PopularProject/>
+            <LatestProject api={settings.latestProject.api}
+                           limit={settings.latestProject.limit}
+                           title={settings.latestProject.title}
+                           tagline={settings.latestProject.tagline}/>
+
+            <Service api={settings.service.api}
+                     limit={settings.service.limit}
+                     title={settings.service.title}
+                     tagline={settings.service.tagline}/>
+
+            <PopularProject api={settings.popularProject.api}
+                            limit={settings.popularProject.limit}
+                            title={settings.popularProject.title}
+                            tagline={settings.popularProject.tagline}/>
             <Highlight/>
-            <PhotoGallery
-                title={settings.gallery.intro_title}
-                fetchURL={settings.gallery.fetch_url}
-                description={settings.gallery.intro_tagline}
-            />
-            <Testimonial fetchURL="testimonials"/>
-            <Brand/>
+
+            <PhotoGallery api={settings.photoGallery.api}
+                          limit={settings.photoGallery.limit}
+                          title={settings.photoGallery.title}
+                          tagline={settings.photoGallery.tagline}/>
+
+            <Testimonial api={settings.testimonial.api}
+                         limit={settings.testimonial.limit}
+                         title={settings.testimonial.title}
+                         tagline={settings.testimonial.tagline}/>
+            
+            <Brand api={settings.brand.api}
+                   limit={settings.brand.limit}
+                   title={settings.brand.title}
+                   tagline={settings.brand.tagline}/>
+            
             <Contact/>
         </HomeBase>
     );

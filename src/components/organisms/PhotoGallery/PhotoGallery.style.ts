@@ -4,7 +4,7 @@ export const PhotoGalleryBase = styled.div`
   color: #313437;
   background-color: #fff;
 
-  .photos {
+  .row {
     padding-bottom: 20px;
   }
 

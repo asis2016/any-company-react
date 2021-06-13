@@ -6,26 +6,44 @@
     "site_description": "Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo."
   },
   "landing_page": {
-    "latest_project": [
-      {
-        "visible": "true",
-        "limit": "10"
-      }
-    ],
-    "gallery": {
-      "intro_title": "Modern Architectures",
-      "intro_tagline": "Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.",
-      "visible": "true",
-      "limit": "10",
-      "fetch_url": "galleries"
+    "brand": {
+      "api": "brands",
+      "limit": 8,
+      "title": "Our Brands",
+      "tagline": "",
+      "visible": "true"
     },
-    "testimonials": [
-      {
-        "visible": "true",
-        "limit": "3",
-        "fetch_url": "testimonials"
-      }
-    ],
+    "photo_gallery": {
+      "api": "galleries",
+      "limit": 12,
+      "title": "Modern Architecture",
+      "tagline": "An architectural movement or architectural style based upon new and innovative technologies of construction, particularly the use of glass, steel, and reinforced concrete.",
+      "visible": "true"
+    },
+    "latest_project": {
+      "api": "projects",
+      "limit": 3,
+      "title": "Latest Projects (Modern Houses)",
+      "tagline": "Collection of Contemporary and elegant houses. Typically a post-and-beam structure with a flat or broad low-pitched gable or shed roof."
+    },
+    "popular_project": {
+      "api": "projects",
+      "limit": 4,
+      "title": "Popular Projects",
+      "tagline": "An influential collective of architects, designers, engineers and planners, responsible for some of the world’s most modern and environment friendly buildings."
+    },
+    "testimonial": {
+      "api": "testimonials",
+      "limit": 3,
+      "title": "Testimonials",
+      "tagline": "Our customers love us! Read what they have to say below."
+    },
+    "service": {
+      "api": "services",
+      "limit": 6,
+      "title": "Our Best Services",
+      "tagline": "Our service is reliable, efficient and free of charge. The serviced houses of our professionally operated engineers, provide you with more individuality."
+    },
     "highlight": {
       "visible": "true",
       "featured_image": "yo",
@@ -33,10 +51,6 @@
       "tagline": "Experience the Unforgetable Visit Ever. Lorem ipsum Nullam id dolor id nibh ultricies vehicula ut id elit.",
       "link": "#",
       "linkText": "Start exploring"
-    },
-    "brands": {
-      "visible": "true",
-      "limit": "6"
     },
     "contact": [
       {

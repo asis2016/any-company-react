@@ -3,6 +3,7 @@
  *
  */
 interface BrandProps {
-    /** responseData comes as JSON. */
-    responseData: any;
+    id: string
+    title: string
+    image_url: string
 }
