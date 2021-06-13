@@ -6,14 +6,21 @@ export const ProjectModernBase = styled(Col)`
   min-height: 425px;
   text-align: center;
 
-  .name {
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 20px;
-    color: inherit;
+  h3 {
+    a {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
-  .description {
+  p {
     font-size: 14px;
     margin-top: 15px;
     margin-bottom: 0;
@@ -29,9 +36,9 @@ export const ProjectModernBase = styled(Col)`
     opacity: 0.85;
     transition: opacity 0.2s;
     text-decoration: none;
-  }
 
-  .action:hover {
-    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
   }
 `

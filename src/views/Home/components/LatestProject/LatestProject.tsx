@@ -35,7 +35,6 @@ const LatestProject = ({
             {project.length > 0 ?
                 <Fragment>
                     <SectionIntro title={title} tagline={tagline}/>
-
                     <Row>
                         {project.slice(0, limit).map(item => {
                             return (

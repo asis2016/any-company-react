@@ -8,18 +8,20 @@ const ProjectClassic = ({title, description, image_url, link}: ProjectProps): JS
     return <ProjectClassicBase sm={6}>
         <Row>
             <Col md={12} lg={5}>
-                <Link to="#">
+                <Link to={link}>
                     <img className="img-fluid"
                          src={image_url}
                          alt={title}/>
                 </Link>
             </Col>
             <Col>
-                <h3 className="name">
-                    {title}
+                <h3>
+                    <Link to={link}>
+                        {title}
+                    </Link>
                 </h3>
-                <p className="description">
-                    {description}
+                <p>
+                    {description.slice(0, 150)}{' ...'}
                 </p>
             </Col>
         </Row>

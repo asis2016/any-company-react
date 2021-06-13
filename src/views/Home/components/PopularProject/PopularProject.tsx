@@ -36,13 +36,13 @@ const PopularProject = ({
                         <SectionIntro title={title} tagline={tagline}/>
 
                         <Row>
-                            {project.slice(0, limit).map((item, index) => {
+                            {project.slice(0, limit).map(item => {
                                 return (
                                     <ProjectClassic title={item.title}
                                                     description={item.description}
                                                     image_url={item.image_url}
-                                                    link={'#'}
-                                                    key={index}/>
+                                                    link={`/single/${item.id}`}
+                                                    key={item.id}/>
                                 )
                             })}
                         </Row>

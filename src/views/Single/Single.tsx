@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {SingleBase} from './Single.style'
-import {Link, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import {Col, Container, Row} from 'react-bootstrap'
 import axios from 'axios'
 import {Header} from '../../layouts/Main/components'
@@ -47,24 +47,17 @@ const Single = (): JSX.Element => {
         header: blogSetting.header
     }
 
+    let tagline = `Posted by: x | Posted on: ${data.modified}`
+
     return <SingleBase>
         <Header bg={settings.header.bg}>
-            <HeaderOtherPage title={'a'} tagline={'b'}/>
+            <HeaderOtherPage title={data.title}
+                             tagline={tagline}/>
         </Header>
-        <Container>
+        <Container className="single-container">
             <Row>
-                <Col>
+                <Col md={{span: 8, offset: 2}}>
                     <div className="intro">
-                        <h1>{data.title}</h1>
-                        <p>
-                            <span className="by">by</span>
-                            <Link to="#">
-                                {/* todo: author*/}
-                            </Link>
-                            <span className="date">
-                                {data.modified}
-                            </span>
-                        </p>
                         <img className="img-fluid"
                              src={data.image_url}
                              alt={'alt'}/>

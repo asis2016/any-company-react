@@ -90,4 +90,10 @@ export const SingleBase = styled.div`
       }
     }
   }
+
+  @media (min-width: 1199px){
+    .single-container{
+      padding: 100px 0 170px 0;
+    }
+  }
 `

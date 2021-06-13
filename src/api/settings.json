@@ -31,7 +31,7 @@
     },
     "popular_project": {
       "api": "projects",
-      "limit": 4,
+      "limit": 6,
       "title": "Popular Projects",
       "tagline": "An influential collective of architects, designers, engineers and planners, responsible for some of the world’s most modern and environment friendly buildings."
     },
@@ -43,7 +43,7 @@
     },
     "service": {
       "api": "services",
-      "limit": 6,
+      "limit": 9,
       "title": "Our Best Services",
       "tagline": "Our service is reliable, efficient and free of charge. The serviced houses of our professionally operated engineers, provide you with more individuality."
     },

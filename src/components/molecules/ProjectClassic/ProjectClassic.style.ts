@@ -10,21 +10,27 @@ export const ProjectClassicBase = styled(Col)`
     min-height: 160px;
   }
 
-  .name {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    color: inherit;
+  h3 {
+    a {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   @media (max-width: 991px) {
-    .name {
+    h3 {
       margin-top: 22px;
     }
   }
 
-  .description {
+  p {
     font-size: 15px;
     margin-bottom: 0;
   }

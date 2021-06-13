@@ -1,4 +1,4 @@
-import { Col } from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import styled from 'styled-components'
 
 export const FeatureBoxBase = styled(Col)`
@@ -9,27 +9,26 @@ export const FeatureBoxBase = styled(Col)`
     padding: 30px;
     background-color: #fff;
     margin-bottom: 30px;
-  }
 
-  .icon {
-    font-size: 60px;
-    color: #1485ee;
-    margin-top: 20px;
-    margin-bottom: 35px;
-  }
+    i {
+      font-size: 60px;
+      color: #1485ee;
+      margin-top: 20px;
+      margin-bottom: 35px;
+    }
 
-  .name {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 8px;
-    margin-top: 0;
-    color: inherit;
-  }
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+      margin-top: 0;
+      color: inherit;
+    }
 
-  .description {
-    font-size: 15px;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    p {
+      font-size: 15px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
   }
-  
 `;

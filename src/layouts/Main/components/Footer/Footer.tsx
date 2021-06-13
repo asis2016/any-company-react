@@ -1,23 +1,14 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import {FooterBase} from './Footer.style'
 import {site, social_media} from '../../../../api/settings.json'
-import axios from 'axios'
 
 /***
  * The footer component.
  * @constructor
  */
 const Footer = (): JSX.Element => {
-
-    const [siteSetting, setSiteSetting] = useState<SiteSettingProps[]>([])
-
-    useEffect(() => {
-        axios.get('site')
-            .then(response => setSiteSetting(response.data))
-        // eslint-disable-next-line
-    }, [])
 
     return <FooterBase>
         <Container>
