@@ -1,4 +1,3 @@
-import '../../assets/css/dashboard.css'
 import React from 'react'
 import {DashboardLayoutBase} from './DashboardLayout.style'
 import {Link} from 'react-router-dom'

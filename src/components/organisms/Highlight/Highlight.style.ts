@@ -1,27 +1,20 @@
 import styled from "styled-components";
 import screenContentPhoneImg from '../../../assets/images/screen-content-phone.jpg'
+import {light} from "../../../theme";
 
 export const HighlightBase = styled.div`
-  color: #313437;
-  background-color: #eef4f7;
+  background-color: ${light.background.secondary};
   padding: 50px 0 55px;
   overflow: hidden;
 
-  p {
-    color: #7d8285;
-  }
-
   h2 {
-    font-weight: bold;
     margin-bottom: 35px;
     line-height: 1.5;
     padding-top: 0;
     margin-top: 0;
-    color: inherit;
   }
 
   .intro {
-    font-size: 18px;
     max-width: 500px;
     line-height: 1.5;
 

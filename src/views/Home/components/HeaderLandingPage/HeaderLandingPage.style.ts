@@ -1,12 +1,13 @@
 import {Container} from 'react-bootstrap'
 import styled from 'styled-components'
+import { light } from '../../../../theme'
 
 export const HeaderLandingPageBase = styled(Container)`
   margin-top: 20px;
   text-align: center;
 
   h1 {
-    color: #fff;
+    color: ${light.heading.secondary};
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
@@ -15,7 +16,7 @@ export const HeaderLandingPageBase = styled(Container)`
   }
 
   p {
-    color: rgba(255, 255, 255, 0.8);
+    color: ${light.text.secondary} !important;
     font-size: 20px;
     margin-bottom: 30px;
     font-weight: 300;

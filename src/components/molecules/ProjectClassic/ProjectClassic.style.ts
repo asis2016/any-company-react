@@ -12,8 +12,6 @@ export const ProjectClassicBase = styled(Col)`
 
   h3 {
     a {
-      font-weight: bold;
-      font-size: 16px;
       margin-top: 20px;
       color: inherit;
       text-decoration: none;
@@ -28,10 +26,5 @@ export const ProjectClassicBase = styled(Col)`
     h3 {
       margin-top: 22px;
     }
-  }
-
-  p {
-    font-size: 15px;
-    margin-bottom: 0;
   }
 `

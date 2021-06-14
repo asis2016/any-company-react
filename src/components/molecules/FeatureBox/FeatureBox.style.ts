@@ -12,21 +12,16 @@ export const FeatureBoxBase = styled(Col)`
 
     i {
       font-size: 60px;
-      color: #1485ee;
       margin-top: 20px;
       margin-bottom: 35px;
     }
 
     h3 {
-      font-weight: bold;
-      font-size: 18px;
       margin-bottom: 8px;
       margin-top: 0;
-      color: inherit;
     }
 
     p {
-      font-size: 15px;
       margin-top: 15px;
       margin-bottom: 20px;
     }

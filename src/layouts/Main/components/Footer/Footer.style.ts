@@ -1,21 +1,21 @@
-import styled from 'styled-components' 
+import styled from 'styled-components'
 
 export const FooterBase = styled.div`
-  /* footer-dark */
-   {
-    padding: 50px 0;
-    color: #f0f9ff;
-    background-color: #282d32;
-  }
+  padding: 50px 0;
+  color: #fff;
+  background-color: #282d32;
 
-   h3 {
+  h3 {
+    color: #fff;
     margin-top: 0;
     margin-bottom: 12px;
-    font-weight: bold;
-    font-size: 16px;
   }
 
-   ul {
+  h6 {
+    color: #fff;
+  }
+
+  ul {
     padding: 0;
     list-style: none;
     line-height: 1.6;
@@ -23,50 +23,45 @@ export const FooterBase = styled.div`
     margin-bottom: 0;
   }
 
-   ul a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.6;
+  p {
+    color: #fff;
   }
 
-   ul a:hover {
-    opacity: 0.8;
+  ul {
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+    }
   }
 
-  @media (max-width:767px) {
-     .item:not(.social) {
+  @media (max-width: 767px) {
+    .item:not(.social) {
       text-align: center;
       padding-bottom: 20px;
     }
   }
 
-   .item.text {
+  .item.text {
     margin-bottom: 36px;
   }
 
-  @media (max-width:767px) {
-     .item.text {
-      margin-bottom: 0;
-    }
-  }
-
-   .item.text p {
-    opacity: 0.6;
-    margin-bottom: 0;
-  }
-
-   .item.social {
+  .item.social {
     text-align: center;
   }
 
-  @media (max-width:991px) {
-     .item.social {
+  @media (max-width: 991px) {
+    .item.social {
       text-align: center;
       margin-top: 20px;
     }
   }
 
-   .item.social > a {
+  .item.social > a {
     font-size: 20px;
     width: 36px;
     height: 36px;
@@ -74,21 +69,21 @@ export const FooterBase = styled.div`
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
     margin: 0 8px;
     color: #fff;
     opacity: 0.75;
   }
 
-   .item.social > a:hover {
+  .item.social > a:hover {
     opacity: 0.9;
   }
 
-   .copyright {
+  .copyright {
+    color: #fff;
     text-align: center;
-    padding-top: 24px;
-    opacity: 0.3;
-    font-size: 13px;
+    padding-top: 35px;
+    font-size: small;
     margin-bottom: 0;
   }
 `

@@ -10,7 +10,6 @@ export const HeaderOtherPageBase = styled.div`
 
   h1 {
     font-size: 50px;
-    font-weight: bold;
     margin-top: 0;
     margin-bottom: 15px;
     line-height: 1.4;

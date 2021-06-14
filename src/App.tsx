@@ -1,11 +1,12 @@
 import React from 'react';
+import './assets/css/dashboard.css'
 import './assets/css/bootstrap.min.css'
 import './assets/fonts/font-awesome.min.css'
 import './assets/fonts/ionicons.min.css'
+import {AppBase} from './App.style';
 import {Blog, Dashboard, Home, Login, Project, Service, Single} from "./views";
 import {Footer} from "./layouts/Main/components";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {AppBase} from './App.style';
 import {Gallery, Profile} from './views/Dashboard/components';
 
 const App = (): JSX.Element => {

@@ -7,10 +7,8 @@ export const ProjectModernBase = styled(Col)`
   text-align: center;
 
   h3 {
+    margin: 15px 0;
     a {
-      font-weight: bold;
-      font-size: 16px;
-      margin-top: 20px;
       color: inherit;
       text-decoration: none;
 
@@ -18,12 +16,6 @@ export const ProjectModernBase = styled(Col)`
         text-decoration: underline;
       }
     }
-  }
-
-  p {
-    font-size: 14px;
-    margin-top: 15px;
-    margin-bottom: 0;
   }
 
   .action {

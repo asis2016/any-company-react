@@ -1,12 +1,11 @@
 import styled from 'styled-components'
+import {light} from '../../../../theme'
+
 
 export const LatestProjectBase = styled.div`
-  color: #313437;
-  background-color: #fff;
+  background-color: ${light.background.primary};
 
   .row {
     padding-bottom: 40px;
   }
-
-  
 `

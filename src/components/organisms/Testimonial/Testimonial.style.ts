@@ -1,12 +1,8 @@
 import styled from 'styled-components'
+import {light} from '../../../theme'
 
 export const TestimonialBase = styled.div`
-  color: #313437;
-  background-color: #eef4f7;
-
-  p {
-    color: #7d8285;
-  }
+  background-color: ${light.background.secondary};
 
   .row {
     padding: 50px 0 20px;
@@ -20,7 +16,6 @@ export const TestimonialBase = styled.div`
         position: relative;
 
         p {
-          font-size: 15px;
           margin-bottom: 0;
         }
 
@@ -49,14 +44,11 @@ export const TestimonialBase = styled.div`
         }
 
         h5 {
-          font-weight: bold;
           margin-bottom: 2px;
-          color: inherit;
         }
 
         p {
-          font-size: 13px;
-          color: #9da9ae;
+          font-size: small;
         }
       }
     }
