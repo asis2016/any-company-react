@@ -19,7 +19,7 @@ export const TestimonialBase = styled.div`
         background-color: #fff;
         position: relative;
 
-        .description {
+        p {
           font-size: 15px;
           margin-bottom: 0;
         }

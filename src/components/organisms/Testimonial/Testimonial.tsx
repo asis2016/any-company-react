@@ -31,20 +31,14 @@ const Testimonial = ({api, limit, title, tagline}: LandingPageComponentProps): J
                     return (
                         <Col className="item" key={item.id}>
                             <div className="box">
-                                <p className="description">
-                                    {item.testimonial}
-                                </p>
+                                <p>{item.testimonial.slice(0, 100)}{' ...'}</p>
                             </div>
                             <div className="author">
                                 <img className="rounded-circle"
                                      src={item.image_url}
                                      alt={item.client_name}/>
-                                <h5>
-                                    {item.client_name}
-                                </h5>
-                                <p>
-                                    {item.client_position}
-                                </p>
+                                <h5>{item.client_name}</h5>
+                                <p>{item.client_position}</p>
                             </div>
                         </Col>
                     )

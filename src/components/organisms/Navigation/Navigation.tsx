@@ -79,7 +79,7 @@ const Navigation = ({brandName, children}: NavigationProps): JSX.Element => {
                         </div>
                     </form>
                     <span className="navbar-text">
-                <Link className="login" to="#">
+                <Link className="login" to='/login/'>
                   Log In
                 </Link>
               </span>

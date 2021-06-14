@@ -1,6 +1,6 @@
 /**
  * An interface for Testimonials.
- * */
+ */
 interface TestimonialProps {
     id: string
     client_name: string
