@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react'
 import {Col, Row} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import {LatestPost, QuickStat} from '../../components/molecules'
+import {ModelStat} from '../../components/organisms'
 import {DashboardLayout} from '../../layouts/DashboardLayout'
 import {DashboardBase} from './Dashboard.style'
 
@@ -9,102 +11,39 @@ const Dashboard = (props: any): JSX.Element => {
     return <DashboardBase>
         <DashboardLayout title={'Dashboards'}>
             <Fragment>
-                <QuickStat/>
+                {/* Quick stat */}
+                <Row>
+                    <QuickStat title='Monthly Income'
+                               content='$ 30,000'/>
+                    <QuickStat title='Earnings (Annual)'
+                               content='$ 250,000'/>
+                    <QuickStat title='Monthly Income'
+                               content='$ 30,000'/>
+                    <QuickStat title='Monthly Income'
+                               content='$ 30,000'/>
+                </Row>
+                {/* ends quick stat */}
+
+                <Row>
+                    <Col>
+                        <ModelStat title='Database model stats'/>
+                    </Col>
+                    <Col>
+                        <LatestPost title='Gallery' api='galleries'/>
+                        <LatestPost title='Projects' api='projects'/>
+                    </Col>
+                </Row>
                 <Row>
                     <EarningOverview/>
                     <RevenueSource/>
                 </Row>
                 <Row>
-                    <Project/>
+
                     <ColorExample/>
                 </Row>
             </Fragment>
         </DashboardLayout>
     </DashboardBase>
-}
-
-/* quick stat */
-function QuickStat() {
-    return <Row>
-        <Col md={6} xl={3} className="mb-4">
-            <div className="card shadow border-start-primary py-2">
-                <div className="card-body">
-                    <div className="row align-items-center no-gutters">
-                        <div className="col me-2">
-                            <div className="text-uppercase text-primary fw-bold text-xs mb-1">
-                                <span>Earnings (monthly)</span>
-                            </div>
-                            <div className="text-dark fw-bold h5 mb-0"><span>$40,000</span></div>
-                        </div>
-                        <div className="col-auto"><i
-                            className="fas fa-calendar fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </Col>
-
-        <Col md={6} xl={3} className="mb-4">
-            <div className="card shadow border-start-success py-2">
-                <div className="card-body">
-                    <div className="row align-items-center no-gutters">
-                        <div className="col me-2">
-                            <div className="text-uppercase text-success fw-bold text-xs mb-1">
-                                <span>Earnings (annual)</span>
-                            </div>
-                            <div className="text-dark fw-bold h5 mb-0"><span>$215,000</span></div>
-                        </div>
-                        <div className="col-auto"><i
-                            className="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </Col>
-
-        <Col md={6} xl={3} className="mb-4">
-            <div className="card shadow border-start-info py-2">
-                <div className="card-body">
-                    <div className="row align-items-center no-gutters">
-                        <div className="col me-2">
-                            <div className="text-uppercase text-info fw-bold text-xs mb-1">
-                                <span>Tasks</span></div>
-                            <div className="row g-0 align-items-center">
-                                <div className="col-auto">
-                                    <div className="text-dark fw-bold h5 mb-0 me-3"><span>50%</span>
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="progress progress-sm">
-                                        <div className="progress-bar bg-info"
-                                             style={{width: '50%'}}>
-                                            <span className="visually-hidden">50%</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-auto"><i
-                            className="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </Col>
-
-        <Col md={6} xl={3} className="mb-4">
-            <div className="card shadow border-start-warning py-2">
-                <div className="card-body">
-                    <div className="row align-items-center no-gutters">
-                        <div className="col me-2">
-                            <div className="text-uppercase text-warning fw-bold text-xs mb-1">
-                                <span>Pending Requests</span>
-                            </div>
-                            <div className="text-dark fw-bold h5 mb-0"><span>18</span></div>
-                        </div>
-                        <div className="col-auto"><i
-                            className="fas fa-comments fa-2x text-gray-300"></i></div>
-                    </div>
-                </div>
-            </div>
-        </Col>
-    </Row>
 }
 
 function EarningOverview() {
@@ -168,109 +107,6 @@ function RevenueSource() {
     </div>
 }
 
-function Project() {
-    return <div className="col-lg-6 mb-4">
-        <div className="card shadow mb-4">
-            <div className="card-header py-3">
-                <h6 className="text-primary fw-bold m-0">Projects</h6>
-            </div>
-            <div className="card-body">
-                <h4 className="small fw-bold">Server migration<span
-                    className="float-end">20%</span></h4>
-                <div className="progress mb-4">
-                    <div className="progress-bar bg-danger"
-                         style={{width: '20%'}}><span
-                        className="visually-hidden">20%</span>
-                    </div>
-                </div>
-                <h4 className="small fw-bold">Sales tracking<span
-                    className="float-end">40%</span></h4>
-                <div className="progress mb-4">
-                    <div className="progress-bar bg-warning"
-                         style={{width: '40%'}}><span
-                        className="visually-hidden">40%</span>
-                    </div>
-                </div>
-                <h4 className="small fw-bold">Customer Database<span
-                    className="float-end">60%</span></h4>
-                <div className="progress mb-4">
-                    <div className="progress-bar bg-primary" style={{width: '60%'}}><span
-                        className="visually-hidden">60%</span></div>
-                </div>
-                <h4 className="small fw-bold">Payout Details<span
-                    className="float-end">80%</span></h4>
-                <div className="progress mb-4">
-                    <div className="progress-bar bg-info"
-                         style={{width: '80%'}}><span
-                        className="visually-hidden">80%</span>
-                    </div>
-                </div>
-                <h4 className="small fw-bold">Account setup<span
-                    className="float-end">Complete!</span></h4>
-                <div className="progress mb-4">
-                    <div className="progress-bar bg-success"
-                         style={{width: '100%'}}>
-                        <span className="visually-hidden">100%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="card shadow mb-4">
-            <div className="card-header py-3">
-                <h6 className="text-primary fw-bold m-0">Todo List</h6>
-            </div>
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item">
-                    <div className="row align-items-center no-gutters">
-                        <div className="col me-2">
-                            <h6 className="mb-0"><strong>Lunch meeting</strong></h6><span
-                            className="text-xs">10:30 AM</span>
-                        </div>
-                        <div className="col-auto">
-                            <div className="form-check">
-                                <input className="form-check-input"
-                                       type="checkbox"
-                                       id="formCheck-1"/>
-                                <label className="form-check-label"></label>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li className="list-group-item">
-                    <div className="row align-items-center no-gutters">
-                        <div className="col me-2">
-                            <h6 className="mb-0"><strong>Lunch meeting</strong></h6><span
-                            className="text-xs">11:30 AM</span>
-                        </div>
-                        <div className="col-auto">
-                            <div className="form-check">
-                                <input className="form-check-input"
-                                       type="checkbox" id="formCheck-2"/>
-                                <label
-                                    className="form-check-label"></label>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li className="list-group-item">
-                    <div className="row align-items-center no-gutters">
-                        <div className="col me-2">
-                            <h6 className="mb-0"><strong>Lunch meeting</strong></h6><span
-                            className="text-xs">12:30 AM</span>
-                        </div>
-                        <div className="col-auto">
-                            <div className="form-check">
-                                <input className="form-check-input"
-                                       type="checkbox"
-                                       id="formCheck-3"/>
-                                <label className="form-check-label"></label></div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-}
 
 function ColorExample() {
     return <div className="col">
