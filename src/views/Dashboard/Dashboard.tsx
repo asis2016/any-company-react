@@ -107,7 +107,6 @@ function RevenueSource() {
     </div>
 }
 
-
 function ColorExample() {
     return <div className="col">
         <div className="row">

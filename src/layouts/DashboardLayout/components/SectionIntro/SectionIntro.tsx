@@ -1,20 +1,32 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {SectionIntroBase} from './SectionIntro.style'
+import {ButtonAdd, ButtonExport} from '../../../../components/atoms'
 
 const SectionIntro = (props: any): JSX.Element => {
 
     return <SectionIntroBase>
-        <div className="d-sm-flex justify-content-between align-items-center mb-4">
-            <h3 className="text-dark mb-0">
-                {props.title}
-            </h3>
-            <Link className="btn btn-primary btn-sm d-none d-sm-inline-block"
-                  to="#">
-                <i className="fas fa-download fa-sm text-white-50"></i>
-                {''}Generate Report
-            </Link>
-        </div>
+        <nav aria-label="breadcrumb" className="breadcrumb-nav">
+            <ol className="breadcrumb">
+                <li className="breadcrumb-item">
+                    <Link to="#">
+                        Dashboard
+                    </Link>
+                </li>
+                <li className="breadcrumb-item">
+                    <Link to="#">
+                        {props.title}
+                    </Link>
+                </li>
+                <li className="breadcrumb-item active">
+                    List
+                </li>
+            </ol>
+        </nav>
+        <nav className="navbar navbar-action">
+            <ButtonAdd link='#'/>
+            <ButtonExport link='#'/>
+        </nav>
     </SectionIntroBase>
 }
 
