@@ -21,6 +21,5 @@ export {default as ProjectAdd} from './Project'
 export {default as Service} from './Service'
 
 /* Testimonial */
-export {default as Testimonial} from './Testimonial'
-
+export {TestimonialDelete, Testimonial} from './Testimonial'
 

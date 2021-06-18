@@ -1,1 +1,2 @@
-export { default } from './Testimonial'
+export { default as Testimonial } from './Testimonial'
+export { default as TestimonialDelete } from './TestimonialDelete'

@@ -10,7 +10,8 @@ import {
     Profile as ProfileDashboard,
     Project as ProjectDashboard,
     Service as ServiceDashboard,
-    Testimonial as TestimonialDashboard
+    Testimonial as TestimonialDashboard,
+    TestimonialDelete
 } from './views/Dashboard/components';
 
 
@@ -47,7 +48,11 @@ const MainRouter = () => {
             <Route path='/dashboard/profile/' component={ProfileDashboard}/>
             <Route path='/dashboard/projects/' component={ProjectDashboard}/>
             <Route path='/dashboard/services/' component={ServiceDashboard}/>
+
+            {/* Testimonial */}
+            <Route path='/dashboard/testimonials/:id/delete/' component={TestimonialDelete}/>
             <Route path='/dashboard/testimonials/' component={TestimonialDashboard}/>
+
             <Route path='/dashboard/' component={Dashboard}/>
         </Switch>
     </Router>

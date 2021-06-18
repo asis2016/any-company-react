@@ -1,5 +1,6 @@
 export {default as FeatureBox} from './FeatureBox'
 export {default as LatestPost} from './LatestPost'
+export {default as ListAction} from './ListAction'
 export {default as SectionIntro} from './SectionIntro'
 export {default as ProjectClassic} from './ProjectClassic'
 export {default as ProjectModern} from './ProjectModern'
