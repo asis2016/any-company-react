@@ -6,8 +6,11 @@ export const HeaderOtherPageBase = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
 
+  h1, p{
+    color: #fff;
+  }
+  
   h1 {
     font-size: 50px;
     margin-top: 0;

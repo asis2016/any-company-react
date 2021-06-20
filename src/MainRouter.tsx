@@ -1,18 +1,8 @@
 import React from "react"
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {Blog, Dashboard, Home, Login, Project, Service, Single} from "./views";
+import {Blog, Home, Login, Project, Service, Single} from "./views";
 import {Footer} from "./layouts/Main/components";
-import {
-    Blog as BlogDashboard,
-    Comment as CommentDashboard,
-    Gallery as GalleryDashboard,
-    GeneralSetting as GeneralSettingDashboard,
-    Profile as ProfileDashboard,
-    Project as ProjectDashboard,
-    Service as ServiceDashboard,
-    Testimonial as TestimonialDashboard,
-    TestimonialDelete
-} from './views/Dashboard/components';
+
 
 
 const MainRouter = () => {
@@ -38,22 +28,7 @@ const MainRouter = () => {
                 <Project/>
                 <Footer/>
             </Route>
-
-            {/* Dashboard starts here. */}
-            <Route path='/login/' component={Login}/>
-            <Route path='/dashboard/blog/' component={BlogDashboard}/>
-            <Route path='/dashboard/comments/' component={CommentDashboard}/>
-            <Route path='/dashboard/galleries/' component={GalleryDashboard}/>
-            <Route path='/dashboard/settings/' component={GeneralSettingDashboard}/>
-            <Route path='/dashboard/profile/' component={ProfileDashboard}/>
-            <Route path='/dashboard/projects/' component={ProjectDashboard}/>
-            <Route path='/dashboard/services/' component={ServiceDashboard}/>
-
-            {/* Testimonial */}
-            <Route path='/dashboard/testimonials/:id/delete/' component={TestimonialDelete}/>
-            <Route path='/dashboard/testimonials/' component={TestimonialDashboard}/>
-
-            <Route path='/dashboard/' component={Dashboard}/>
+            <Route path='/login/' component={Login}/>            
         </Switch>
     </Router>
 }
